@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CheckBoxDelegate {
-    func didSelectCheckBox(state: Bool, identifier: Int, title: String)
+    func didSelectCheckBox(_ state: Bool, identifier: Int, title: String)
 }

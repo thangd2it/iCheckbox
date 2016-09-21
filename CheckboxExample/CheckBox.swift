@@ -19,25 +19,25 @@ class CheckBox: UIButton {
         super.init(frame: frame)
         self.adjustEdgeInsets()
         self.applyStyle()
-        self.setTitle(title, forState: UIControlState.Normal)
-        self.addTarget(self, action: #selector(CheckBox.onTouchUpInside(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        self.setTitle(title, for: UIControlState())
+        self.addTarget(self, action: #selector(CheckBox.onTouchUpInside(_:)), for: UIControlEvents.touchUpInside)
     }
 
     func adjustEdgeInsets() {
         let leftInset: CGFloat = 8.0
-        self.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
+        self.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
         self.imageEdgeInsets = UIEdgeInsetsMake(0.0 as CGFloat, leftInset, 0.0 as CGFloat, 0.0 as CGFloat)
         self.titleEdgeInsets = UIEdgeInsetsMake(0.0 as CGFloat, (leftInset * 2), 0.0 as CGFloat, 0.0 as CGFloat)
     }
 
     func applyStyle() {
-        self.setImage(UIImage(named: "checked_checkbox"), forState: UIControlState.Selected)
-        self.setImage(UIImage(named: "unchecked_checkbox"), forState: UIControlState.Normal)
-        self.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        self.setImage(UIImage(named: "checked_checkbox"), for: UIControlState.selected)
+        self.setImage(UIImage(named: "unchecked_checkbox"), for: UIControlState())
+        self.setTitleColor(UIColor.black, for: UIControlState())
     }
 
-    func onTouchUpInside(sender: UIButton) {
-        self.selected = !self.selected
-        delegate?.didSelectCheckBox(self.selected, identifier: self.tag, title: self.titleLabel!.text!)
+    func onTouchUpInside(_ sender: UIButton) {
+        self.isSelected = !self.isSelected
+        delegate?.didSelectCheckBox(self.isSelected, identifier: self.tag, title: self.titleLabel!.text!)
     }
 }

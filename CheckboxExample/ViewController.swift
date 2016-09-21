@@ -24,7 +24,7 @@ class ViewController: UIViewController, CheckBoxDelegate {
     func createCheckboxes() {
         let numberOfCheckboxes = 3
         let checkboxHeight: CGFloat = 44.0
-        var frame = CGRectMake(0, 20, self.view.frame.size.width, checkboxHeight)
+        var frame = CGRect(x: 0, y: 20, width: self.view.frame.size.width, height: checkboxHeight)
 
         for counter in 0 ..< numberOfCheckboxes {
             let checkbox = CheckBox(frame: frame, title: checkboxTitles[counter], selected: false)
@@ -35,7 +35,7 @@ class ViewController: UIViewController, CheckBoxDelegate {
         }
     }
 
-    func didSelectCheckBox(state: Bool, identifier: Int, title: String) {
+    func didSelectCheckBox(_ state: Bool, identifier: Int, title: String) {
         print("Checkbox '\(title)' has state \(state)")
     }
 }
