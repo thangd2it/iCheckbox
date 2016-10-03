@@ -25,7 +25,7 @@ final class iCheckbox: UIButton {
     init(frame: CGRect, title: String, selected: Bool) {
         super.init(frame: frame)
         adjustEdgeInsets()
-        applyStyle()
+        applyDefaultStyle()
         self.isSelected = selected
         self.setTitle(title, for: UIControlState.normal)
         self.addTarget(self, action: #selector(iCheckbox.onTouchUpInside(_:)), for: UIControlEvents.touchUpInside)
@@ -68,7 +68,7 @@ final class iCheckbox: UIButton {
         self.titleEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), (leftInset * 2), CGFloat(0.0), CGFloat(0.0))
     }
     
-    func applyStyle() {
+    func applyDefaultStyle() {
         self.setImage(UIImage(named: "checkbox_checked"), for: UIControlState.selected)
         self.setImage(UIImage(named: "checkbox_unchecked"), for: UIControlState.normal)
         self.setTitleColor(UIColor.black, for: UIControlState.normal)

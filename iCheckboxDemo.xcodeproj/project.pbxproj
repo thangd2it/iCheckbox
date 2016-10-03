@@ -71,30 +71,32 @@
 		AB97CB2B1DA24A9C00A6A272 /* CheckboxImages */ = {
 			isa = PBXGroup;
 			children = (
-				AB97CB2C1DA24A9C00A6A272 /* checked */,
-				AB97CB301DA24A9C00A6A272 /* unchecked */,
+				AB97CB2C1DA24A9C00A6A272 /* Checked */,
+				AB97CB301DA24A9C00A6A272 /* Unchecked */,
 			);
 			name = CheckboxImages;
 			path = iCheckbox/CheckboxImages;
 			sourceTree = "<group>";
 		};
-		AB97CB2C1DA24A9C00A6A272 /* checked */ = {
+		AB97CB2C1DA24A9C00A6A272 /* Checked */ = {
 			isa = PBXGroup;
 			children = (
 				AB97CB3A1DA24ACF00A6A272 /* checkbox_checked.png */,
 				AB97CB3B1DA24ACF00A6A272 /* checkbox_checked@2x.png */,
 				AB97CB3C1DA24ACF00A6A272 /* checkbox_checked@3x.png */,
 			);
+			name = Checked;
 			path = checked;
 			sourceTree = "<group>";
 		};
-		AB97CB301DA24A9C00A6A272 /* unchecked */ = {
+		AB97CB301DA24A9C00A6A272 /* Unchecked */ = {
 			isa = PBXGroup;
 			children = (
 				AB97CB401DA24AEF00A6A272 /* checkbox_unchecked.png */,
 				AB97CB411DA24AEF00A6A272 /* checkbox_unchecked@2x.png */,
 				AB97CB421DA24AEF00A6A272 /* checkbox_unchecked@3x.png */,
 			);
+			name = Unchecked;
 			path = unchecked;
 			sourceTree = "<group>";
 		};

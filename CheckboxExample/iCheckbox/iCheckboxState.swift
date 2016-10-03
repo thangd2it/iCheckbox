@@ -6,8 +6,6 @@
 //  Copyright © 2016 Demo. All rights reserved.
 //
 
-import UIKit
-
 struct iCheckboxState {
     
     var title = "No Title"

@@ -12,8 +12,13 @@ struct iCheckboxBuilderConfig {
     
     var startPosition = CGPoint(x: 0, y: 25)
     var checkboxSize = CGSize(width: 200, height: 44)
+    
     var titleColorForSelectedState = UIColor.black
     var titleColorForNormalState = UIColor.black
+    
     var imageNameForSelectedState = "checkbox_checked"
     var imageNameForNormalState = "checkbox_unchecked"
+    
+    var selection: iCheckboxSelection = .Single
+    var style: iCheckboxPoolStyle = .OneColumn
 }

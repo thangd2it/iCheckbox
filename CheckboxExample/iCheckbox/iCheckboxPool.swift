@@ -8,13 +8,18 @@
 
 import UIKit
 
-enum iCheckboxSelectionType {
+enum iCheckboxSelection {
     case Single, Multiple
+}
+
+enum iCheckboxPoolStyle {
+    case OneColumn, TwoColumns, OneColumnBordered, TwoColumnsBordered
 }
 
 struct iCheckboxPool {
     
-    var selectionType: iCheckboxSelectionType = .Single
+    var selectionType: iCheckboxSelection
+    var style: iCheckboxPoolStyle
     
     private var index = 0
     private var checkboxes: [iCheckbox]?
@@ -23,6 +28,8 @@ struct iCheckboxPool {
     
     init() {
         checkboxes = []
+        selectionType = .Single
+        style = .OneColumn
     }
     
     // MARK: - Checkbox manipulation

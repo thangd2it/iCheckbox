@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, iCheckboxDelegate {
 
-    let checkboxTitles = ["First option", "Second option", "Third option"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         addCheckboxes()
@@ -38,8 +36,10 @@ class ViewController: UIViewController, iCheckboxDelegate {
         var fourthCheckboxState = iCheckboxState()
         fourthCheckboxState.title = "Four"
         
-        checkboxBuilder.addCheckboxes(withStates: [firstCheckboxState, secondCheckboxState, thirdCheckboxState, fourthCheckboxState],
-                                      andSelectionType: .Single)
+        checkboxBuilder.addCheckboxes(withStates: [firstCheckboxState,
+                                                   secondCheckboxState,
+                                                   thirdCheckboxState,
+                                                   fourthCheckboxState])
     }
 
     func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String) {
