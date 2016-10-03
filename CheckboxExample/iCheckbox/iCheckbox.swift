@@ -9,7 +9,7 @@
 import UIKit
 
 protocol iCheckboxDelegate {
-    func didSelectCheckbox(_ state: Bool, identifier: Int, title: String)
+    func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String)
 }
 
 final class iCheckbox: UIButton {
@@ -26,6 +26,7 @@ final class iCheckbox: UIButton {
         super.init(frame: frame)
         adjustEdgeInsets()
         applyStyle()
+        self.isSelected = selected
         self.setTitle(title, for: UIControlState.normal)
         self.addTarget(self, action: #selector(iCheckbox.onTouchUpInside(_:)), for: UIControlEvents.touchUpInside)
     }
@@ -56,8 +57,6 @@ final class iCheckbox: UIButton {
         if let onSelect = onSelect {
             onSelect(self)
         }
-        
-        //delegate?.didSelectCheckbox(self.isSelected, identifier: self.tag, title: self.titleLabel!.text!)
     }
     
     // MARK: Private

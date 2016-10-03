@@ -16,12 +16,16 @@ struct iCheckboxPool {
     
     var selectionType: iCheckboxSelectionType = .Single
     
-    private static var index = 0
+    private var index = 0
     private var checkboxes: [iCheckbox]?
+    
+    // MARK: - Initializers
     
     init() {
         checkboxes = []
     }
+    
+    // MARK: - Checkbox manipulation
     
     mutating func addCheckbox(checkbox: iCheckbox) {
         assignTag(forCheckbox: checkbox)
@@ -43,9 +47,9 @@ struct iCheckboxPool {
     
     // MARK: - Private
     
-    private func assignTag(forCheckbox checkbox: iCheckbox) {
-        checkbox.tag = iCheckboxPool.index
-        iCheckboxPool.index += 1
+    private mutating func assignTag(forCheckbox checkbox: iCheckbox) {
+        checkbox.tag = index
+        index += 1
     }
     
 }

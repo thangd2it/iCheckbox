@@ -14,9 +14,9 @@ class iCheckboxBuilder {
     var startPosition: CGPoint
     var checkboxSize: CGSize
     
+    private var nextOriginY: CGFloat
     private var checkboxPool: iCheckboxPool
     private weak var canvas: UIView?
-    private var nextOriginY: CGFloat
     
     // MARK: - Initializers
     
@@ -39,7 +39,19 @@ class iCheckboxBuilder {
                                                    width: checkboxSize.width,
                                                    height: checkboxSize.height),
                                      title: state.title,
-                                     selected: false)
+                                     selected: state.selected)
+            
+            if let imageNameForNormalState = state.imageNameForNormalState {
+                checkbox.setImageForNormalState(withName: imageNameForNormalState)
+            }
+            
+            if let imageNameForSelectedState = state.imageNameForSelectedState {
+                checkbox.setImageForSelectedState(withName: imageNameForSelectedState)
+            }
+            
+            checkbox.setTitleColorForNormalState(color: state.titleColorForNormalState)
+            checkbox.setTitleColorForSelectedState(color: state.titleColorForSelectedState)
+            
             checkbox.onSelect = { checkbox in
                 
                 switch self.checkboxPool.selectionType {
@@ -51,12 +63,10 @@ class iCheckboxBuilder {
                     print("")
                 }
                 
-                self.delegate?.didSelectCheckbox(checkbox.isSelected,
+                self.delegate?.didSelectCheckbox(withState: checkbox.isSelected,
                                                  identifier: checkbox.tag,
-                                                 title: (checkbox.titleLabel?.text)!)
-            
+                                                 andTitle: (checkbox.titleLabel?.text)!)
             }
-            
             checkboxPool.addCheckbox(checkbox: checkbox)
             canvas?.addSubview(checkbox)
         }

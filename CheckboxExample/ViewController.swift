@@ -29,11 +29,11 @@ class ViewController: UIViewController, iCheckboxDelegate {
         
         var firstCheckboxState = iCheckboxState()
         firstCheckboxState.title = "One"
-        firstCheckboxState.imageNameForNormalState = "Sd"
         
         var secondCheckboxState = iCheckboxState()
         secondCheckboxState.title = "Two"
         secondCheckboxState.titleColorForNormalState = UIColor.blue
+        secondCheckboxState.titleColorForSelectedState = UIColor.red
 
         var thirdCheckboxState = iCheckboxState()
         thirdCheckboxState.title = "Three"
@@ -45,7 +45,7 @@ class ViewController: UIViewController, iCheckboxDelegate {
                                       andSelectionType: .Single)
     }
 
-    func didSelectCheckbox(_ state: Bool, identifier: Int, title: String) {
+    func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String) {
         print("Checkbox '\(title)', has selected state: \(state)")
     }
 }
