@@ -22,8 +22,8 @@ class ViewController: UIViewController, iCheckboxDelegate {
     }
 
     func addCheckboxes() {
-        let checkboxBuilderState = iCheckboxBuilderState()
-        let checkboxBuilder = iCheckboxBuilder(withCanvas: self.view, andState: checkboxBuilderState)
+        let checkboxBuilderConfig = iCheckboxBuilderConfig()
+        let checkboxBuilder = iCheckboxBuilder(withCanvas: self.view, andConfig: checkboxBuilderConfig)
         
         checkboxBuilder.delegate = self
         

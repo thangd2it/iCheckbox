@@ -11,7 +11,7 @@ import UIKit
 class iCheckboxBuilder {
     
     var delegate: iCheckboxDelegate?
-    var checkboxBuilderState: iCheckboxBuilderState
+    var checkboxBuilderConfig: iCheckboxBuilderConfig
     
     private var nextOriginY: CGFloat
     private var checkboxPool: iCheckboxPool
@@ -19,11 +19,11 @@ class iCheckboxBuilder {
     
     // MARK: - Initializers
     
-    init(withCanvas canvas: UIView, andState state: iCheckboxBuilderState) {
+    init(withCanvas canvas: UIView, andConfig config: iCheckboxBuilderConfig) {
         self.canvas = canvas
         self.checkboxPool = iCheckboxPool()
-        self.checkboxBuilderState = state
-        self.nextOriginY = checkboxBuilderState.startPosition.y
+        self.checkboxBuilderConfig = config
+        self.nextOriginY = checkboxBuilderConfig.startPosition.y
     }
     
     // MARK: - Construct checkboxes
@@ -32,17 +32,17 @@ class iCheckboxBuilder {
         checkboxPool.selectionType = selectionType
         
         for state in states {
-            let checkbox = iCheckbox(frame: CGRect(x: checkboxBuilderState.startPosition.x,
+            let checkbox = iCheckbox(frame: CGRect(x: checkboxBuilderConfig.startPosition.x,
                                                    y: nextPositionY(),
-                                                   width: checkboxBuilderState.checkboxSize.width,
-                                                   height: checkboxBuilderState.checkboxSize.height),
+                                                   width: checkboxBuilderConfig.checkboxSize.width,
+                                                   height: checkboxBuilderConfig.checkboxSize.height),
                                      title: state.title,
                                      selected: state.selected)
             
-            checkbox.setImageForNormalState(withName: checkboxBuilderState.imageNameForNormalState)
-            checkbox.setImageForSelectedState(withName: checkboxBuilderState.imageNameForSelectedState)
-            checkbox.setTitleColorForNormalState(color: checkboxBuilderState.titleColorForNormalState)
-            checkbox.setTitleColorForSelectedState(color: checkboxBuilderState.titleColorForSelectedState)
+            checkbox.setImageForNormalState(withName: checkboxBuilderConfig.imageNameForNormalState)
+            checkbox.setImageForSelectedState(withName: checkboxBuilderConfig.imageNameForSelectedState)
+            checkbox.setTitleColorForNormalState(color: checkboxBuilderConfig.titleColorForNormalState)
+            checkbox.setTitleColorForSelectedState(color: checkboxBuilderConfig.titleColorForSelectedState)
             
             checkbox.onSelect = { checkbox in
                 
@@ -67,7 +67,7 @@ class iCheckboxBuilder {
     // MARK: - Private
     
     private func nextPositionY() -> CGFloat {
-        nextOriginY += checkboxBuilderState.checkboxSize.height
+        nextOriginY += checkboxBuilderConfig.checkboxSize.height
         return nextOriginY
     }
 }

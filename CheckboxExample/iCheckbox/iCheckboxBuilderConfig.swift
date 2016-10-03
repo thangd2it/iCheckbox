@@ -1,5 +1,5 @@
 //
-//  iCheckboxBuilderState.swift
+//  iCheckboxBuilderConfig.swift
 //  iCheckboxDemo
 //
 //  Created by Stefan Godoroja on 10/3/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct iCheckboxBuilderState {
+struct iCheckboxBuilderConfig {
     
     var startPosition = CGPoint(x: 0, y: 25)
     var checkboxSize = CGSize(width: 200, height: 44)
