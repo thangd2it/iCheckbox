@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB11A3D71996405500187836 /* CheckBoxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB11A3D61996405500187836 /* CheckBoxDelegate.swift */; };
+		AB97CB271DA1953400A6A272 /* iCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97CB231DA1953400A6A272 /* iCheckbox.swift */; };
+		AB97CB281DA1953400A6A272 /* iCheckboxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97CB241DA1953400A6A272 /* iCheckboxBuilder.swift */; };
+		AB97CB291DA1953400A6A272 /* iCheckboxPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97CB251DA1953400A6A272 /* iCheckboxPool.swift */; };
+		AB97CB2A1DA1953400A6A272 /* iCheckboxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97CB261DA1953400A6A272 /* iCheckboxState.swift */; };
 		ABCF586619958C3C00347942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF586519958C3C00347942 /* AppDelegate.swift */; };
 		ABCF586819958C3C00347942 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF586719958C3C00347942 /* ViewController.swift */; };
 		ABCF586B19958C3C00347942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCF586919958C3C00347942 /* Main.storyboard */; };
 		ABCF586D19958C3C00347942 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABCF586C19958C3C00347942 /* Images.xcassets */; };
-		ABCF588319958C5E00347942 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF588219958C5E00347942 /* CheckBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB11A3D61996405500187836 /* CheckBoxDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxDelegate.swift; sourceTree = "<group>"; };
-		ABCF586019958C3C00347942 /* CheckBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB97CB231DA1953400A6A272 /* iCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCheckbox.swift; path = iCheckbox/iCheckbox.swift; sourceTree = "<group>"; };
+		AB97CB241DA1953400A6A272 /* iCheckboxBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCheckboxBuilder.swift; path = iCheckbox/iCheckboxBuilder.swift; sourceTree = "<group>"; };
+		AB97CB251DA1953400A6A272 /* iCheckboxPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCheckboxPool.swift; path = iCheckbox/iCheckboxPool.swift; sourceTree = "<group>"; };
+		AB97CB261DA1953400A6A272 /* iCheckboxState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCheckboxState.swift; path = iCheckbox/iCheckboxState.swift; sourceTree = "<group>"; };
+		ABCF586019958C3C00347942 /* iCheckboxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCheckboxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCF586419958C3C00347942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABCF586519958C3C00347942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABCF586719958C3C00347942 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABCF586A19958C3C00347942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABCF586C19958C3C00347942 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ABCF588219958C5E00347942 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,10 +41,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB97CB1E1DA18D1100A6A272 /* iCheckbox */ = {
+			isa = PBXGroup;
+			children = (
+				AB97CB241DA1953400A6A272 /* iCheckboxBuilder.swift */,
+				AB97CB251DA1953400A6A272 /* iCheckboxPool.swift */,
+				AB97CB231DA1953400A6A272 /* iCheckbox.swift */,
+				AB97CB261DA1953400A6A272 /* iCheckboxState.swift */,
+			);
+			name = iCheckbox;
+			sourceTree = "<group>";
+		};
 		ABCF585719958C3B00347942 = {
 			isa = PBXGroup;
 			children = (
-				ABCF586219958C3C00347942 /* CheckBox */,
+				ABCF586219958C3C00347942 /* iCheckboxDemo */,
 				ABCF586119958C3C00347942 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,23 +63,22 @@
 		ABCF586119958C3C00347942 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABCF586019958C3C00347942 /* CheckBox.app */,
+				ABCF586019958C3C00347942 /* iCheckboxDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ABCF586219958C3C00347942 /* CheckBox */ = {
+		ABCF586219958C3C00347942 /* iCheckboxDemo */ = {
 			isa = PBXGroup;
 			children = (
 				ABCF586519958C3C00347942 /* AppDelegate.swift */,
 				ABCF586719958C3C00347942 /* ViewController.swift */,
-				AB11A3D61996405500187836 /* CheckBoxDelegate.swift */,
-				ABCF588219958C5E00347942 /* CheckBox.swift */,
+				AB97CB1E1DA18D1100A6A272 /* iCheckbox */,
 				ABCF586919958C3C00347942 /* Main.storyboard */,
 				ABCF586C19958C3C00347942 /* Images.xcassets */,
 				ABCF586319958C3C00347942 /* Supporting Files */,
 			);
-			name = CheckBox;
+			name = iCheckboxDemo;
 			path = CheckboxExample;
 			sourceTree = "<group>";
 		};
@@ -79,9 +93,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ABCF585F19958C3B00347942 /* CheckBox */ = {
+		ABCF585F19958C3B00347942 /* iCheckboxDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABCF587C19958C3C00347942 /* Build configuration list for PBXNativeTarget "CheckBox" */;
+			buildConfigurationList = ABCF587C19958C3C00347942 /* Build configuration list for PBXNativeTarget "iCheckboxDemo" */;
 			buildPhases = (
 				ABCF585C19958C3B00347942 /* Sources */,
 				ABCF585D19958C3B00347942 /* Frameworks */,
@@ -91,9 +105,9 @@
 			);
 			dependencies = (
 			);
-			name = CheckBox;
+			name = iCheckboxDemo;
 			productName = CheckboxExample;
-			productReference = ABCF586019958C3C00347942 /* CheckBox.app */;
+			productReference = ABCF586019958C3C00347942 /* iCheckboxDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +118,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Demo;
 				TargetAttributes = {
 					ABCF585F19958C3B00347942 = {
@@ -113,7 +127,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ABCF585B19958C3B00347942 /* Build configuration list for PBXProject "CheckBox" */;
+			buildConfigurationList = ABCF585B19958C3B00347942 /* Build configuration list for PBXProject "iCheckboxDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -126,7 +140,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ABCF585F19958C3B00347942 /* CheckBox */,
+				ABCF585F19958C3B00347942 /* iCheckboxDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -148,10 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB97CB281DA1953400A6A272 /* iCheckboxBuilder.swift in Sources */,
 				ABCF586819958C3C00347942 /* ViewController.swift in Sources */,
 				ABCF586619958C3C00347942 /* AppDelegate.swift in Sources */,
-				ABCF588319958C5E00347942 /* CheckBox.swift in Sources */,
-				AB11A3D71996405500187836 /* CheckBoxDelegate.swift in Sources */,
+				AB97CB291DA1953400A6A272 /* iCheckboxPool.swift in Sources */,
+				AB97CB2A1DA1953400A6A272 /* iCheckboxState.swift in Sources */,
+				AB97CB271DA1953400A6A272 /* iCheckbox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +198,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -192,6 +210,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -225,8 +244,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -234,6 +255,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -243,6 +265,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -253,10 +276,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CheckboxExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "md.gottlieb.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = CheckBox;
+				PRODUCT_NAME = iCheckboxDemo;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -267,10 +290,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CheckboxExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "md.gottlieb.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = CheckBox;
+				PRODUCT_NAME = iCheckboxDemo;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -278,7 +301,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ABCF585B19958C3B00347942 /* Build configuration list for PBXProject "CheckBox" */ = {
+		ABCF585B19958C3B00347942 /* Build configuration list for PBXProject "iCheckboxDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABCF587A19958C3C00347942 /* Debug */,
@@ -287,7 +310,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABCF587C19958C3C00347942 /* Build configuration list for PBXNativeTarget "CheckBox" */ = {
+		ABCF587C19958C3C00347942 /* Build configuration list for PBXNativeTarget "iCheckboxDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ABCF587D19958C3C00347942 /* Debug */,
