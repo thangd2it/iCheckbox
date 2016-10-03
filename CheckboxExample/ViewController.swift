@@ -22,9 +22,9 @@ class ViewController: UIViewController, iCheckboxDelegate {
     }
 
     func addCheckboxes() {
-        let checkboxBuilder = iCheckboxBuilder(withCanvas: self.view,
-                                               startPosition: CGPoint(x: 0, y: 30),
-                                               andCheckboxSize: CGSize(width: 320, height: 44))
+        let checkboxBuilderState = iCheckboxBuilderState()
+        let checkboxBuilder = iCheckboxBuilder(withCanvas: self.view, andState: checkboxBuilderState)
+        
         checkboxBuilder.delegate = self
         
         var firstCheckboxState = iCheckboxState()
@@ -32,8 +32,6 @@ class ViewController: UIViewController, iCheckboxDelegate {
         
         var secondCheckboxState = iCheckboxState()
         secondCheckboxState.title = "Two"
-        secondCheckboxState.titleColorForNormalState = UIColor.blue
-        secondCheckboxState.titleColorForSelectedState = UIColor.red
 
         var thirdCheckboxState = iCheckboxState()
         thirdCheckboxState.title = "Three"

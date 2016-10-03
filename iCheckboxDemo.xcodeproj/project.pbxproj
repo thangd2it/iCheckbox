@@ -11,6 +11,13 @@
 		AB97CB281DA1953400A6A272 /* iCheckboxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97CB241DA1953400A6A272 /* iCheckboxBuilder.swift */; };
 		AB97CB291DA1953400A6A272 /* iCheckboxPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97CB251DA1953400A6A272 /* iCheckboxPool.swift */; };
 		AB97CB2A1DA1953400A6A272 /* iCheckboxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97CB261DA1953400A6A272 /* iCheckboxState.swift */; };
+		AB97CB3D1DA24ACF00A6A272 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = AB97CB3A1DA24ACF00A6A272 /* checkbox_checked.png */; };
+		AB97CB3E1DA24ACF00A6A272 /* checkbox_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB97CB3B1DA24ACF00A6A272 /* checkbox_checked@2x.png */; };
+		AB97CB3F1DA24ACF00A6A272 /* checkbox_checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB97CB3C1DA24ACF00A6A272 /* checkbox_checked@3x.png */; };
+		AB97CB431DA24AEF00A6A272 /* checkbox_unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = AB97CB401DA24AEF00A6A272 /* checkbox_unchecked.png */; };
+		AB97CB441DA24AEF00A6A272 /* checkbox_unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB97CB411DA24AEF00A6A272 /* checkbox_unchecked@2x.png */; };
+		AB97CB451DA24AEF00A6A272 /* checkbox_unchecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB97CB421DA24AEF00A6A272 /* checkbox_unchecked@3x.png */; };
+		AB97CB471DA24B9900A6A272 /* iCheckboxBuilderState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97CB461DA24B9900A6A272 /* iCheckboxBuilderState.swift */; };
 		ABCF586619958C3C00347942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF586519958C3C00347942 /* AppDelegate.swift */; };
 		ABCF586819958C3C00347942 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF586719958C3C00347942 /* ViewController.swift */; };
 		ABCF586B19958C3C00347942 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABCF586919958C3C00347942 /* Main.storyboard */; };
@@ -22,6 +29,13 @@
 		AB97CB241DA1953400A6A272 /* iCheckboxBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCheckboxBuilder.swift; path = iCheckbox/iCheckboxBuilder.swift; sourceTree = "<group>"; };
 		AB97CB251DA1953400A6A272 /* iCheckboxPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCheckboxPool.swift; path = iCheckbox/iCheckboxPool.swift; sourceTree = "<group>"; };
 		AB97CB261DA1953400A6A272 /* iCheckboxState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCheckboxState.swift; path = iCheckbox/iCheckboxState.swift; sourceTree = "<group>"; };
+		AB97CB3A1DA24ACF00A6A272 /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_checked.png; sourceTree = "<group>"; };
+		AB97CB3B1DA24ACF00A6A272 /* checkbox_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_checked@2x.png"; sourceTree = "<group>"; };
+		AB97CB3C1DA24ACF00A6A272 /* checkbox_checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_checked@3x.png"; sourceTree = "<group>"; };
+		AB97CB401DA24AEF00A6A272 /* checkbox_unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_unchecked.png; sourceTree = "<group>"; };
+		AB97CB411DA24AEF00A6A272 /* checkbox_unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_unchecked@2x.png"; sourceTree = "<group>"; };
+		AB97CB421DA24AEF00A6A272 /* checkbox_unchecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_unchecked@3x.png"; sourceTree = "<group>"; };
+		AB97CB461DA24B9900A6A272 /* iCheckboxBuilderState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iCheckboxBuilderState.swift; path = iCheckbox/iCheckboxBuilderState.swift; sourceTree = "<group>"; };
 		ABCF586019958C3C00347942 /* iCheckboxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCheckboxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABCF586419958C3C00347942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABCF586519958C3C00347942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,11 +59,43 @@
 			isa = PBXGroup;
 			children = (
 				AB97CB241DA1953400A6A272 /* iCheckboxBuilder.swift */,
+				AB97CB461DA24B9900A6A272 /* iCheckboxBuilderState.swift */,
 				AB97CB251DA1953400A6A272 /* iCheckboxPool.swift */,
 				AB97CB231DA1953400A6A272 /* iCheckbox.swift */,
 				AB97CB261DA1953400A6A272 /* iCheckboxState.swift */,
+				AB97CB2B1DA24A9C00A6A272 /* CheckboxImages */,
 			);
 			name = iCheckbox;
+			sourceTree = "<group>";
+		};
+		AB97CB2B1DA24A9C00A6A272 /* CheckboxImages */ = {
+			isa = PBXGroup;
+			children = (
+				AB97CB2C1DA24A9C00A6A272 /* checked */,
+				AB97CB301DA24A9C00A6A272 /* unchecked */,
+			);
+			name = CheckboxImages;
+			path = iCheckbox/CheckboxImages;
+			sourceTree = "<group>";
+		};
+		AB97CB2C1DA24A9C00A6A272 /* checked */ = {
+			isa = PBXGroup;
+			children = (
+				AB97CB3A1DA24ACF00A6A272 /* checkbox_checked.png */,
+				AB97CB3B1DA24ACF00A6A272 /* checkbox_checked@2x.png */,
+				AB97CB3C1DA24ACF00A6A272 /* checkbox_checked@3x.png */,
+			);
+			path = checked;
+			sourceTree = "<group>";
+		};
+		AB97CB301DA24A9C00A6A272 /* unchecked */ = {
+			isa = PBXGroup;
+			children = (
+				AB97CB401DA24AEF00A6A272 /* checkbox_unchecked.png */,
+				AB97CB411DA24AEF00A6A272 /* checkbox_unchecked@2x.png */,
+				AB97CB421DA24AEF00A6A272 /* checkbox_unchecked@3x.png */,
+			);
+			path = unchecked;
 			sourceTree = "<group>";
 		};
 		ABCF585719958C3B00347942 = {
@@ -150,7 +196,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB97CB3D1DA24ACF00A6A272 /* checkbox_checked.png in Resources */,
+				AB97CB451DA24AEF00A6A272 /* checkbox_unchecked@3x.png in Resources */,
 				ABCF586B19958C3C00347942 /* Main.storyboard in Resources */,
+				AB97CB441DA24AEF00A6A272 /* checkbox_unchecked@2x.png in Resources */,
+				AB97CB3E1DA24ACF00A6A272 /* checkbox_checked@2x.png in Resources */,
+				AB97CB3F1DA24ACF00A6A272 /* checkbox_checked@3x.png in Resources */,
+				AB97CB431DA24AEF00A6A272 /* checkbox_unchecked.png in Resources */,
 				ABCF586D19958C3C00347942 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB97CB281DA1953400A6A272 /* iCheckboxBuilder.swift in Sources */,
+				AB97CB471DA24B9900A6A272 /* iCheckboxBuilderState.swift in Sources */,
 				ABCF586819958C3C00347942 /* ViewController.swift in Sources */,
 				ABCF586619958C3C00347942 /* AppDelegate.swift in Sources */,
 				AB97CB291DA1953400A6A272 /* iCheckboxPool.swift in Sources */,
