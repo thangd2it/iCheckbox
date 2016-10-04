@@ -21,11 +21,11 @@ struct iCheckboxBuilderConfig {
     
     var selection: iCheckboxSelection = .Single
     var style: iCheckboxPoolStyle = .OneColumn
-    var borderStyle: iCheckboxPoolBorderStyle = .Empty
+    var borderStyle: iCheckboxPoolBorderStyle = .None
     
     var borderWidth: CGFloat = 2.0
     var borderColor = UIColor.black
+    var borderCornerRadius: CGFloat = 10.0
     var headerTitleColor = UIColor.black
     var headerTitle: String?
-    var cornerRadius: CGFloat = 10.0
 }

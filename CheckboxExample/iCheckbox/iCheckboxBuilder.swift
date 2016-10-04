@@ -108,7 +108,7 @@ class iCheckboxBuilder {
                                                               y: lineInitialPositionY,
                                                               width: halfOfPoolWidth * 2,
                                                               height: poolHeight),
-                                          cornerRadius: checkboxBuilderConfig.cornerRadius)
+                                          cornerRadius: checkboxBuilderConfig.borderCornerRadius)
                 borderPath.close()
             }
             
