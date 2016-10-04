@@ -96,22 +96,31 @@ class iCheckboxBuilder {
             let lineInitialPositionY = (checkboxBuilderConfig.startPosition.y + (headerLabel.frame.size.height / 2))
             self.nextOriginY = lineInitialPositionY + borderPadding
             let poolHeight = CGFloat(numberOfCheckboxesInFirstColumn(totalNumberOfCheckboxes: statesCount)) * checkboxBuilderConfig.checkboxSize.height
-            let borderPath = UIBezierPath()
-            borderPath.move(to: CGPoint(x: checkboxBuilderConfig.startPosition.x,
-                                  y: lineInitialPositionY))
-            borderPath.addLine(to: CGPoint(x: checkboxBuilderConfig.startPosition.x,
-                                     y: checkboxBuilderConfig.startPosition.y + poolHeight + borderPadding * 3))
-            borderPath.addLine(to: CGPoint(x: (nextOriginX + checkboxBuilderConfig.checkboxSize.width * numberOfColumns + borderPadding),
-                                     y: checkboxBuilderConfig.startPosition.y + poolHeight + borderPadding * 3))
-            borderPath.addLine(to: CGPoint(x: (nextOriginX + checkboxBuilderConfig.checkboxSize.width * numberOfColumns + borderPadding),
-                                     y: lineInitialPositionY))
-            borderPath.close()
+            var borderPath = UIBezierPath()
+            
+            if checkboxPool.borderStyle == .Solid {
+                borderPath.move(to: CGPoint(x: checkboxBuilderConfig.startPosition.x,
+                                            y: lineInitialPositionY))
+                borderPath.addLine(to: CGPoint(x: checkboxBuilderConfig.startPosition.x,
+                                               y: checkboxBuilderConfig.startPosition.y + poolHeight + borderPadding * 3))
+                borderPath.addLine(to: CGPoint(x: (nextOriginX + checkboxBuilderConfig.checkboxSize.width * numberOfColumns + borderPadding),
+                                               y: checkboxBuilderConfig.startPosition.y + poolHeight + borderPadding * 3))
+                borderPath.addLine(to: CGPoint(x: (nextOriginX + checkboxBuilderConfig.checkboxSize.width * numberOfColumns + borderPadding),
+                                               y: lineInitialPositionY))
+                borderPath.close()
+            } else if checkboxPool.borderStyle == .SolidWithRoundedCorners {
+                borderPath = UIBezierPath(roundedRect: CGRect(x: checkboxBuilderConfig.startPosition.x,
+                                                              y: lineInitialPositionY,
+                                                              width: halfOfPoolWidth * 2,
+                                                              height: poolHeight),
+                                          cornerRadius: checkboxBuilderConfig.cornerRadius)
+            }
             
             let borderShape = CAShapeLayer()
             borderShape.path = borderPath.cgPath
             borderShape.fillColor = UIColor.clear.cgColor
-            borderShape.strokeColor = UIColor.black.cgColor
-            borderShape.lineWidth = 2.0
+            borderShape.strokeColor = checkboxBuilderConfig.borderColor.cgColor
+            borderShape.lineWidth = checkboxBuilderConfig.borderWidth
             canvas?.layer.addSublayer(borderShape)
             canvas?.addSubview(headerLabel)
         }
@@ -119,10 +128,15 @@ class iCheckboxBuilder {
     
     // MARK: - Private
     private func configureHeaderLabel() {
-        headerLabel.textColor = UIColor.black
-        headerLabel.text = " Some title "
-        headerLabel.sizeToFit()
-        headerLabel.backgroundColor = canvas?.backgroundColor
+        
+        if let title = checkboxBuilderConfig.headerTitle {
+            headerLabel.textColor = UIColor.black
+            headerLabel.text = " \(title) "
+            headerLabel.sizeToFit()
+            headerLabel.backgroundColor = canvas?.backgroundColor
+        } else {
+            headerLabel.text = nil
+        }
     }
     
     private func calculateNextPositionX(forCheckboxAtIndex index: Int, andNumberOfCheckboxes checkboxesCount: Int) {
@@ -137,7 +151,6 @@ class iCheckboxBuilder {
             
         default:
             ()
-            
         }
     }
     
@@ -161,7 +174,7 @@ class iCheckboxBuilder {
     private func numberOfCheckboxesInFirstColumn(totalNumberOfCheckboxes count: Int) -> Int {
         let checkboxCount = (Float(count) / Float(checkboxPool.numberOfColumns()))
         // If number of checkboxes is 3, then checkboxCount is equal to 1.5 
-        // after it's rounded we get 2 checkboxes for first column.
+        // after it's rounded we get 2 checkboxes for first column (and 1 for second column)
         let fixedCheckboxCount = round(checkboxCount)
         return Int(fixedCheckboxCount)
     }

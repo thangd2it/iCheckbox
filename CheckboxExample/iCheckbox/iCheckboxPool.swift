@@ -17,7 +17,7 @@ enum iCheckboxPoolStyle {
 }
 
 enum iCheckboxPoolBorderStyle {
-    case Empty, Default, RoundedCorners
+    case None, Solid, SolidWithRoundedCorners
 }
 
 struct iCheckboxPool {
@@ -35,7 +35,7 @@ struct iCheckboxPool {
         checkboxes = []
         selectionType = .Single
         style = .OneColumn
-        borderStyle = .Empty
+        borderStyle = .None
     }
     
     // MARK: - Checkbox manipulation
@@ -68,7 +68,7 @@ struct iCheckboxPool {
     
     func bordered() -> Bool {
         
-        if borderStyle == .Default || borderStyle == .RoundedCorners {
+        if borderStyle == .Solid || borderStyle == .SolidWithRoundedCorners {
             return true
         } else {
             return false

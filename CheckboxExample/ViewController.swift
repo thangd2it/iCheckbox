@@ -20,7 +20,9 @@ class ViewController: UIViewController, iCheckboxDelegate {
     }
 
     func addCheckboxes() {
-        let checkboxBuilderConfig = iCheckboxBuilderConfig()
+        var checkboxBuilderConfig = iCheckboxBuilderConfig()
+        checkboxBuilderConfig.headerTitle = "Some title"
+        
         let checkboxBuilder = iCheckboxBuilder(withCanvas: self.view, andConfig: checkboxBuilderConfig)
         checkboxBuilder.delegate = self
         
