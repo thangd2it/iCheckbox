@@ -86,11 +86,9 @@ class iCheckboxBuilder {
         if checkboxPool.bordered() {
             configureHeaderLabel()
             let numberOfColumns = CGFloat(checkboxPool.numberOfColumns())
-            let halfOfPoolWidth = ((checkboxBuilderConfig.startPosition.x +
-                                   (checkboxBuilderConfig.checkboxSize.width * numberOfColumns) +
-                                   (borderPadding * 4)) / 2.0)
+            let halfOfPoolWidth = (((checkboxBuilderConfig.checkboxSize.width * numberOfColumns) + (borderPadding * numberOfColumns)) / 2.0)
             let halfOfHeaderLabelWidth = (headerLabel.frame.size.width / 2)
-            headerLabel.frame = CGRect(origin: CGPoint(x: (halfOfPoolWidth - halfOfHeaderLabelWidth),
+            headerLabel.frame = CGRect(origin: CGPoint(x: checkboxBuilderConfig.startPosition.x + (halfOfPoolWidth - halfOfHeaderLabelWidth),
                                                        y: checkboxBuilderConfig.startPosition.y),
                                        size: headerLabel.frame.size)
             let lineInitialPositionY = (checkboxBuilderConfig.startPosition.y + (headerLabel.frame.size.height / 2))
@@ -99,14 +97,11 @@ class iCheckboxBuilder {
             var borderPath = UIBezierPath()
             
             if checkboxPool.borderStyle == .Solid {
-                borderPath.move(to: CGPoint(x: checkboxBuilderConfig.startPosition.x,
-                                            y: lineInitialPositionY))
-                borderPath.addLine(to: CGPoint(x: checkboxBuilderConfig.startPosition.x,
-                                               y: checkboxBuilderConfig.startPosition.y + poolHeight + borderPadding * 3))
-                borderPath.addLine(to: CGPoint(x: (nextOriginX + checkboxBuilderConfig.checkboxSize.width * numberOfColumns + borderPadding),
-                                               y: checkboxBuilderConfig.startPosition.y + poolHeight + borderPadding * 3))
-                borderPath.addLine(to: CGPoint(x: (nextOriginX + checkboxBuilderConfig.checkboxSize.width * numberOfColumns + borderPadding),
-                                               y: lineInitialPositionY))
+                borderPath = UIBezierPath(roundedRect: CGRect(x: checkboxBuilderConfig.startPosition.x,
+                                                              y: lineInitialPositionY,
+                                                              width: halfOfPoolWidth * 2,
+                                                              height: poolHeight),
+                                          cornerRadius: 0)
                 borderPath.close()
             } else if checkboxPool.borderStyle == .SolidWithRoundedCorners {
                 borderPath = UIBezierPath(roundedRect: CGRect(x: checkboxBuilderConfig.startPosition.x,
@@ -114,6 +109,7 @@ class iCheckboxBuilder {
                                                               width: halfOfPoolWidth * 2,
                                                               height: poolHeight),
                                           cornerRadius: checkboxBuilderConfig.cornerRadius)
+                borderPath.close()
             }
             
             let borderShape = CAShapeLayer()
