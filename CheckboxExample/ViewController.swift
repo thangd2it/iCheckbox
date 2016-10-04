@@ -26,20 +26,25 @@ class ViewController: UIViewController, iCheckboxDelegate {
         
         var firstCheckboxState = iCheckboxState()
         firstCheckboxState.title = "One"
-        
         var secondCheckboxState = iCheckboxState()
         secondCheckboxState.title = "Two"
-
         var thirdCheckboxState = iCheckboxState()
         thirdCheckboxState.title = "Three"
-
         var fourthCheckboxState = iCheckboxState()
         fourthCheckboxState.title = "Four"
-        
+        var fifthCheckboxState = iCheckboxState()
+        fifthCheckboxState.title = "Five"
+        var sixthCheckboxState = iCheckboxState()
+        sixthCheckboxState.title = "Six"
+        var seventhCheckboxState = iCheckboxState()
+        seventhCheckboxState.title = "Seven"
         checkboxBuilder.addCheckboxes(withStates: [firstCheckboxState,
                                                    secondCheckboxState,
                                                    thirdCheckboxState,
-                                                   fourthCheckboxState])
+                                                   fourthCheckboxState,
+                                                   fifthCheckboxState,
+                                                   sixthCheckboxState,
+                                                   seventhCheckboxState])
     }
 
     func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String) {

@@ -13,16 +13,21 @@ enum iCheckboxSelection {
 }
 
 enum iCheckboxPoolStyle {
-    case OneColumn, TwoColumns, OneColumnBordered, TwoColumnsBordered
+    case OneColumn, TwoColumns
+}
+
+enum iCheckboxPoolBorderStyle {
+    case Empty, Default, RoundedCorners
 }
 
 struct iCheckboxPool {
     
     var selectionType: iCheckboxSelection
     var style: iCheckboxPoolStyle
+    var borderStyle: iCheckboxPoolBorderStyle
     
     private var index = 0
-    private var checkboxes: [iCheckbox]?
+    private var checkboxes: [iCheckbox]
     
     // MARK: - Initializers
     
@@ -30,25 +35,43 @@ struct iCheckboxPool {
         checkboxes = []
         selectionType = .Single
         style = .OneColumn
+        borderStyle = .Empty
     }
     
     // MARK: - Checkbox manipulation
     
     mutating func addCheckbox(checkbox: iCheckbox) {
         assignTag(forCheckbox: checkbox)
-        checkboxes?.append(checkbox)
+        checkboxes.append(checkbox)
     }
     
     mutating func deselectAllCheckboxes(except checkbox: iCheckbox?) {
         
-        if let checkboxes = checkboxes {
+        for aCheckbox in checkboxes {
             
-            for aCheckbox in checkboxes {
-                
-                if aCheckbox.isEqual(checkbox) == false {
-                    aCheckbox.isSelected = false
-                }
+            if aCheckbox.isEqual(checkbox) == false {
+                aCheckbox.isSelected = false
             }
+        }
+    }
+    
+    // MARK: - Getters
+    
+    func numberOfColumns() -> Int {
+        
+        if style == .OneColumn {
+            return 1
+        } else {
+            return 2
+        }
+    }
+    
+    func bordered() -> Bool {
+        
+        if borderStyle == .Default || borderStyle == .RoundedCorners {
+            return true
+        } else {
+            return false
         }
     }
     
