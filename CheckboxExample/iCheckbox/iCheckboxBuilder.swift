@@ -15,7 +15,6 @@ class iCheckboxBuilder {
     
     private var nextOriginX: CGFloat
     private var nextOriginY: CGFloat
-    
     private var checkboxPool: iCheckboxPool
     private weak var canvas: UIView?
     private lazy var headerLabel = UILabel()
@@ -35,7 +34,7 @@ class iCheckboxBuilder {
         self.nextOriginY = config.startPosition.y
     }
     
-    // MARK: - Construct checkboxes
+    // MARK: - Create checkboxes
     
     func addCheckboxes(withStates states: [iCheckboxState]) {
         addPoolBordersIfRequired(forStatesCount: states.count)
@@ -81,6 +80,8 @@ class iCheckboxBuilder {
         }
     }
     
+    // MARK: - Private - Draw borders and header title
+    
     private func addPoolBordersIfRequired(forStatesCount statesCount: Int) {
         
         if checkboxPool.bordered() {
@@ -123,6 +124,7 @@ class iCheckboxBuilder {
     }
     
     // MARK: - Private
+    
     private func configureHeaderLabel() {
         
         if let title = checkboxBuilderConfig.headerTitle {
