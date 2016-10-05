@@ -58,6 +58,50 @@ Install manually
 
 Getting Started
 ------
+Using iCheckbox is straightforward. Use `iCheckboxBuilderConfig` to create a configuration instance for the `iCheckboxBuilder` which will render checkboxes. `iCheckboxBuilderConfig` contains values to setup checkbox title color, checkbox states images, checkbox pool border, etc. For more details look in API section. Except `iCheckboxBuilderConfig`, `iCheckboxBuilder` takes a series of `iCheckboxState`s, each of them describing a checkbox, it's title and selected state. To get notified when a checkbox is tapped implemented `iCheckboxDelegate`'s didSelectCheckbox() method.
+
+Example:
+
+class ViewController: UIViewController, iCheckboxDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addCheckboxes()
+    }
+
+    func addCheckboxes() {
+        var checkboxBuilderConfig = iCheckboxBuilderConfig()
+        checkboxBuilderConfig.headerTitle = "Some title"
+
+        let checkboxBuilder = iCheckboxBuilder(withCanvas: self.view, andConfig: checkboxBuilderConfig)
+        checkboxBuilder.delegate = self
+
+        var firstCheckboxState = iCheckboxState()
+        firstCheckboxState.title = "One"
+        var secondCheckboxState = iCheckboxState()
+        secondCheckboxState.title = "Two"
+        var thirdCheckboxState = iCheckboxState()
+        thirdCheckboxState.title = "Three"
+        var fourthCheckboxState = iCheckboxState()
+        fourthCheckboxState.title = "Four"
+        var fifthCheckboxState = iCheckboxState()
+        fifthCheckboxState.title = "Five"
+        var sixthCheckboxState = iCheckboxState()
+        sixthCheckboxState.title = "Six"
+        var seventhCheckboxState = iCheckboxState()
+        seventhCheckboxState.title = "Seven"
+        checkboxBuilder.addCheckboxes(withStates: [firstCheckboxState,
+                                                   secondCheckboxState,
+                                                   thirdCheckboxState,
+                                                   fourthCheckboxState,
+                                                   fifthCheckboxState,
+                                                   sixthCheckboxState,
+                                                   seventhCheckboxState])
+    }
+
+    func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String) {
+        print("Checkbox '\(title)', has selected state: \(state)")
+    }}
 
 API
 ------
