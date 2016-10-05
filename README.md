@@ -62,6 +62,7 @@ Using iCheckbox is straightforward. Use `iCheckboxBuilderConfig` to create a con
 
 Example:
 
+```
 class ViewController: UIViewController, iCheckboxDelegate {
 
     override func viewDidLoad() {
@@ -101,10 +102,9 @@ class ViewController: UIViewController, iCheckboxDelegate {
 
     func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String) {
         print("Checkbox '\(title)', has selected state: \(state)")
-    }}
-
-API
-------
+    }
+  }
+```
 
 Contact
 ------
