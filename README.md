@@ -58,9 +58,9 @@ Install manually
 
 Getting Started
 ------
-Using iCheckbox is straightforward. Use `iCheckboxBuilderConfig` to create a configuration instance for the `iCheckboxBuilder` which will render checkboxes. `iCheckboxBuilderConfig` contains values to setup checkbox title color, checkbox states images, checkbox pool border, etc. For more details look in API section. Except `iCheckboxBuilderConfig`, `iCheckboxBuilder` takes a series of `iCheckboxState`s, each of them describing a checkbox, it's title and selected state. To get notified when a checkbox is tapped implemented `iCheckboxDelegate`'s didSelectCheckbox() method.
+Using iCheckbox is straightforward. Use `iCheckboxBuilderConfig` to create a configuration instance for the `iCheckboxBuilder` which will render checkboxes. `iCheckboxBuilderConfig` contains values to setup checkbox title color, checkbox states images, checkbox pool border, etc. Except `iCheckboxBuilderConfig`, `iCheckboxBuilder` takes a series of `iCheckboxState`s, each of them describing a checkbox, it's title and selected state. To get notified when a checkbox is tapped, interested class must implement `iCheckboxDelegate`'s didSelectCheckbox() method.
 
-Example:
+Full example:
 
 ```
 class ViewController: UIViewController, iCheckboxDelegate {
