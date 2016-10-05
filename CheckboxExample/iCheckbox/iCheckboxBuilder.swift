@@ -162,7 +162,13 @@ class iCheckboxBuilder {
         case .TwoColumns:
 
             if index == numberOfCheckboxesInFirstColumn(totalNumberOfCheckboxes: checkboxesCount) {
-                nextOriginY = (checkboxBuilderConfig.startPosition.y + (headerLabel.frame.size.height / 2)) + borderPadding
+                
+                if checkboxPool.borderStyle == .None {
+                    nextOriginY = checkboxBuilderConfig.startPosition.y
+                } else {
+                    nextOriginY = (checkboxBuilderConfig.startPosition.y + (headerLabel.frame.size.height / 2)) + borderPadding
+                }
+                
             } else {
                 nextOriginY += checkboxBuilderConfig.checkboxSize.height
             }
