@@ -6,8 +6,8 @@
 //  Copyright © 2016 Demo. All rights reserved.
 //
 
-
-public struct iCheckboxBuilderConfig {
+@objc
+public final class iCheckboxBuilderConfig: NSObject {
     
     public var startPosition = CGPoint(x: 20, y: 100)
     public var checkboxSize = CGSize(width: 150, height: 44)
@@ -27,6 +27,4 @@ public struct iCheckboxBuilderConfig {
     public var borderCornerRadius: CGFloat = 5.0
     public var headerTitleColor = UIColor.black
     public var headerTitle: String?
-    
-    public init() { }
 }

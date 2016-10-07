@@ -6,20 +6,22 @@
 //  Copyright © 2016 Demo. All rights reserved.
 //
 
-
-public enum iCheckboxSelection {
+@objc
+public enum iCheckboxSelection: Int {
     case Single, Multiple
 }
 
-public enum iCheckboxPoolStyle {
+@objc
+public enum iCheckboxPoolStyle: Int {
     case OneColumn, TwoColumns
 }
 
-public enum iCheckboxPoolBorderStyle {
+@objc
+public enum iCheckboxPoolBorderStyle: Int {
     case None, Solid, SolidWithRoundedCorners
 }
 
-struct iCheckboxPool {
+final class iCheckboxPool {
     
     var selectionType: iCheckboxSelection
     var style: iCheckboxPoolStyle
@@ -39,12 +41,12 @@ struct iCheckboxPool {
     
     // MARK: - Checkbox manipulation
     
-    mutating func addCheckbox(checkbox: iCheckbox) {
+    func addCheckbox(checkbox: iCheckbox) {
         assignTag(forCheckbox: checkbox)
         checkboxes.append(checkbox)
     }
     
-    mutating func deselectAllCheckboxes(except checkbox: iCheckbox?) {
+    func deselectAllCheckboxes(except checkbox: iCheckbox?) {
         
         for aCheckbox in checkboxes {
             
@@ -76,7 +78,7 @@ struct iCheckboxPool {
     
     // MARK: - Private
     
-    private mutating func assignTag(forCheckbox checkbox: iCheckbox) {
+    private func assignTag(forCheckbox checkbox: iCheckbox) {
         checkbox.tag = index
         index += 1
     }

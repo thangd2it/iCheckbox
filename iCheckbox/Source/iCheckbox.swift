@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Ștefan Godoroja. All rights reserved.
 //
 
-
+@objc
 public protocol iCheckboxDelegate {
     func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String)
 }

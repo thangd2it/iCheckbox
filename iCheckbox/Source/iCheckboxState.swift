@@ -6,7 +6,8 @@
 //  Copyright © 2016 Demo. All rights reserved.
 //
 
-public struct iCheckboxState {
+@objc
+public final class iCheckboxState: NSObject {
     
     public var title: String
     public var selected: Bool

@@ -6,8 +6,8 @@
 //  Copyright © 2016 Demo. All rights reserved.
 //
 
-
-public final class iCheckboxBuilder {
+@objc
+public final class iCheckboxBuilder: NSObject {
     
     public var delegate: iCheckboxDelegate?
     
@@ -17,7 +17,6 @@ public final class iCheckboxBuilder {
     private var checkboxPool: iCheckboxPool
     private weak var canvas: UIView?
     private lazy var headerLabel = UILabel()
-    
     private let borderPadding: CGFloat = 5.0
     
     // MARK: - Initializers
@@ -79,7 +78,7 @@ public final class iCheckboxBuilder {
         }
     }
     
-    // MARK: - Private - Draw borders and header title
+    // MARK: - Private
     
     private func addPoolBordersIfRequired(forStatesCount statesCount: Int) {
         
@@ -121,8 +120,6 @@ public final class iCheckboxBuilder {
             canvas?.addSubview(headerLabel)
         }
     }
-    
-    // MARK: - Private
     
     private func configureHeaderLabel() {
         
