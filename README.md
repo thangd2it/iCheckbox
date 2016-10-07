@@ -2,7 +2,7 @@ iCheckbox
 ========
 
 A custom checkbox component for iOS apps, written in Swift 3.0.
-Checkboxes can be ordered in one or two columns, can have solid borders with or without rounded corners, single or multiple selections, etc.
+Checkboxes can be ordered in one or two columns, can have solid borders with or without rounded corners, single or multiple selections, etc. iCheckbox works with iOS 8 and newer, and can be used in an Objective-C project.
 
 See few examples:
 > Single selection, two columns, rounded corners solid border with title
@@ -41,8 +41,6 @@ Library offers checkbox/checkbox pool customization:
   - Border color
   - Border corner radius
   - Header title color
-
-iCheckbox works with iOS 8 and newer.
 
 Install using Cocoapods
 ------
