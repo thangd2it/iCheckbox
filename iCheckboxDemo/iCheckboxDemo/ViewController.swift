@@ -7,16 +7,6 @@
 //
 
 import UIKit
-
-//
-//  ViewController.swift
-//  iCheckboxDemo
-//
-//  Created by Ștefan Godoroja on 8/9/14.
-//  Copyright (c) 2014 Demo. All rights reserved.
-//
-
-import UIKit
 import iCheckbox
 
 class ViewController: UIViewController, iCheckboxDelegate {
