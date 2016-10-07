@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABB763031DA6BA4600C6D27C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB763021DA6BA4600C6D27C /* AppDelegate.swift */; };
+		ABB763051DA6BA4600C6D27C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB763041DA6BA4600C6D27C /* ViewController.swift */; };
+		ABB763081DA6BA4600C6D27C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB763061DA6BA4600C6D27C /* Main.storyboard */; };
+		ABB7630A1DA6BA4600C6D27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB763091DA6BA4600C6D27C /* Assets.xcassets */; };
+		ABB7630D1DA6BA4600C6D27C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7630B1DA6BA4600C6D27C /* LaunchScreen.storyboard */; };
+		ABB763181DA6BA4600C6D27C /* iCheckboxDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB763171DA6BA4600C6D27C /* iCheckboxDemoTests.swift */; };
+		ABB763681DA6C04D00C6D27C /* iCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB763651DA6C04000C6D27C /* iCheckbox.framework */; };
+		ABB763691DA6C04D00C6D27C /* iCheckbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABB763651DA6C04000C6D27C /* iCheckbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABB763141DA6BA4600C6D27C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB762F71DA6BA4600C6D27C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB762FE1DA6BA4600C6D27C;
+			remoteInfo = iCheckboxDemo;
+		};
+		ABB763641DA6C04000C6D27C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ABB762DC1DA6B9D000C6D27C;
+			remoteInfo = iCheckbox;
+		};
+		ABB763661DA6C04000C6D27C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ABB762E51DA6B9D000C6D27C;
+			remoteInfo = iCheckboxTests;
+		};
+		ABB7636A1DA6C04D00C6D27C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB762DB1DA6B9CF00C6D27C;
+			remoteInfo = iCheckbox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ABB7636C1DA6C04D00C6D27C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ABB763691DA6C04D00C6D27C /* iCheckbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ABB762FF1DA6BA4600C6D27C /* iCheckboxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCheckboxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB763021DA6BA4600C6D27C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ABB763041DA6BA4600C6D27C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABB763071DA6BA4600C6D27C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABB763091DA6BA4600C6D27C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABB7630C1DA6BA4600C6D27C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ABB7630E1DA6BA4600C6D27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB763131DA6BA4600C6D27C /* iCheckboxDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCheckboxDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB763171DA6BA4600C6D27C /* iCheckboxDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCheckboxDemoTests.swift; sourceTree = "<group>"; };
+		ABB763191DA6BA4600C6D27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iCheckbox.xcodeproj; path = ../../iCheckbox.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABB762FC1DA6BA4600C6D27C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB763681DA6C04D00C6D27C /* iCheckbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB763101DA6BA4600C6D27C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABB762F61DA6BA4600C6D27C = {
+			isa = PBXGroup;
+			children = (
+				ABB763011DA6BA4600C6D27C /* iCheckboxDemo */,
+				ABB763161DA6BA4600C6D27C /* iCheckboxDemoTests */,
+				ABB763001DA6BA4600C6D27C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABB763001DA6BA4600C6D27C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABB762FF1DA6BA4600C6D27C /* iCheckboxDemo.app */,
+				ABB763131DA6BA4600C6D27C /* iCheckboxDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABB763011DA6BA4600C6D27C /* iCheckboxDemo */ = {
+			isa = PBXGroup;
+			children = (
+				ABB763021DA6BA4600C6D27C /* AppDelegate.swift */,
+				ABB763041DA6BA4600C6D27C /* ViewController.swift */,
+				ABB763061DA6BA4600C6D27C /* Main.storyboard */,
+				ABB763091DA6BA4600C6D27C /* Assets.xcassets */,
+				ABB7630B1DA6BA4600C6D27C /* LaunchScreen.storyboard */,
+				ABB7630E1DA6BA4600C6D27C /* Info.plist */,
+				ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */,
+			);
+			path = iCheckboxDemo;
+			sourceTree = "<group>";
+		};
+		ABB763161DA6BA4600C6D27C /* iCheckboxDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABB763171DA6BA4600C6D27C /* iCheckboxDemoTests.swift */,
+				ABB763191DA6BA4600C6D27C /* Info.plist */,
+			);
+			path = iCheckboxDemoTests;
+			sourceTree = "<group>";
+		};
+		ABB763601DA6C04000C6D27C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABB763651DA6C04000C6D27C /* iCheckbox.framework */,
+				ABB763671DA6C04000C6D27C /* iCheckboxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABB762FE1DA6BA4600C6D27C /* iCheckboxDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB7631C1DA6BA4600C6D27C /* Build configuration list for PBXNativeTarget "iCheckboxDemo" */;
+			buildPhases = (
+				ABB762FB1DA6BA4600C6D27C /* Sources */,
+				ABB762FC1DA6BA4600C6D27C /* Frameworks */,
+				ABB762FD1DA6BA4600C6D27C /* Resources */,
+				ABB7636C1DA6C04D00C6D27C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB7636B1DA6C04D00C6D27C /* PBXTargetDependency */,
+			);
+			name = iCheckboxDemo;
+			productName = iCheckboxDemo;
+			productReference = ABB762FF1DA6BA4600C6D27C /* iCheckboxDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABB763121DA6BA4600C6D27C /* iCheckboxDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABB7631F1DA6BA4600C6D27C /* Build configuration list for PBXNativeTarget "iCheckboxDemoTests" */;
+			buildPhases = (
+				ABB7630F1DA6BA4600C6D27C /* Sources */,
+				ABB763101DA6BA4600C6D27C /* Frameworks */,
+				ABB763111DA6BA4600C6D27C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABB763151DA6BA4600C6D27C /* PBXTargetDependency */,
+			);
+			name = iCheckboxDemoTests;
+			productName = iCheckboxDemoTests;
+			productReference = ABB763131DA6BA4600C6D27C /* iCheckboxDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABB762F71DA6BA4600C6D27C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Godoroja Stefan";
+				TargetAttributes = {
+					ABB762FE1DA6BA4600C6D27C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q453Q9XLFV;
+						ProvisioningStyle = Automatic;
+					};
+					ABB763121DA6BA4600C6D27C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q453Q9XLFV;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ABB762FE1DA6BA4600C6D27C;
+					};
+				};
+			};
+			buildConfigurationList = ABB762FA1DA6BA4600C6D27C /* Build configuration list for PBXProject "iCheckboxDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABB762F61DA6BA4600C6D27C;
+			productRefGroup = ABB763001DA6BA4600C6D27C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ABB763601DA6C04000C6D27C /* Products */;
+					ProjectRef = ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				ABB762FE1DA6BA4600C6D27C /* iCheckboxDemo */,
+				ABB763121DA6BA4600C6D27C /* iCheckboxDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ABB763651DA6C04000C6D27C /* iCheckbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = iCheckbox.framework;
+			remoteRef = ABB763641DA6C04000C6D27C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ABB763671DA6C04000C6D27C /* iCheckboxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = iCheckboxTests.xctest;
+			remoteRef = ABB763661DA6C04000C6D27C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABB762FD1DA6BA4600C6D27C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB7630D1DA6BA4600C6D27C /* LaunchScreen.storyboard in Resources */,
+				ABB7630A1DA6BA4600C6D27C /* Assets.xcassets in Resources */,
+				ABB763081DA6BA4600C6D27C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB763111DA6BA4600C6D27C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABB762FB1DA6BA4600C6D27C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB763051DA6BA4600C6D27C /* ViewController.swift in Sources */,
+				ABB763031DA6BA4600C6D27C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABB7630F1DA6BA4600C6D27C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABB763181DA6BA4600C6D27C /* iCheckboxDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABB763151DA6BA4600C6D27C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB762FE1DA6BA4600C6D27C /* iCheckboxDemo */;
+			targetProxy = ABB763141DA6BA4600C6D27C /* PBXContainerItemProxy */;
+		};
+		ABB7636B1DA6C04D00C6D27C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iCheckbox;
+			targetProxy = ABB7636A1DA6C04D00C6D27C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABB763061DA6BA4600C6D27C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABB763071DA6BA4600C6D27C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ABB7630B1DA6BA4600C6D27C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABB7630C1DA6BA4600C6D27C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABB7631A1DA6BA4600C6D27C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABB7631B1DA6BA4600C6D27C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABB7631D1DA6BA4600C6D27C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q453Q9XLFV;
+				INFOPLIST_FILE = iCheckboxDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gs.godorojastefan.iCheckboxDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ABB7631E1DA6BA4600C6D27C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q453Q9XLFV;
+				INFOPLIST_FILE = iCheckboxDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gs.godorojastefan.iCheckboxDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ABB763201DA6BA4600C6D27C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q453Q9XLFV;
+				INFOPLIST_FILE = iCheckboxDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gs.godorojastefan.iCheckboxDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCheckboxDemo.app/iCheckboxDemo";
+			};
+			name = Debug;
+		};
+		ABB763211DA6BA4600C6D27C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Q453Q9XLFV;
+				INFOPLIST_FILE = iCheckboxDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gs.godorojastefan.iCheckboxDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCheckboxDemo.app/iCheckboxDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABB762FA1DA6BA4600C6D27C /* Build configuration list for PBXProject "iCheckboxDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB7631A1DA6BA4600C6D27C /* Debug */,
+				ABB7631B1DA6BA4600C6D27C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB7631C1DA6BA4600C6D27C /* Build configuration list for PBXNativeTarget "iCheckboxDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB7631D1DA6BA4600C6D27C /* Debug */,
+				ABB7631E1DA6BA4600C6D27C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABB7631F1DA6BA4600C6D27C /* Build configuration list for PBXNativeTarget "iCheckboxDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABB763201DA6BA4600C6D27C /* Debug */,
+				ABB763211DA6BA4600C6D27C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABB762F71DA6BA4600C6D27C /* Project object */;
+}
