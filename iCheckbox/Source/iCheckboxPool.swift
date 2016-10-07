@@ -6,7 +6,6 @@
 //  Copyright © 2016 Demo. All rights reserved.
 //
 
-import UIKit
 
 public enum iCheckboxSelection {
     case Single, Multiple

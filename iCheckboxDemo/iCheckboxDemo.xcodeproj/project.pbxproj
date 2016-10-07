@@ -13,8 +13,8 @@
 		ABB7630A1DA6BA4600C6D27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB763091DA6BA4600C6D27C /* Assets.xcassets */; };
 		ABB7630D1DA6BA4600C6D27C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABB7630B1DA6BA4600C6D27C /* LaunchScreen.storyboard */; };
 		ABB763181DA6BA4600C6D27C /* iCheckboxDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB763171DA6BA4600C6D27C /* iCheckboxDemoTests.swift */; };
-		ABB763681DA6C04D00C6D27C /* iCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB763651DA6C04000C6D27C /* iCheckbox.framework */; };
-		ABB763691DA6C04D00C6D27C /* iCheckbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABB763651DA6C04000C6D27C /* iCheckbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ABDA6E621DA7C6100084A1D1 /* iCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDA6E5C1DA7C52C0084A1D1 /* iCheckbox.framework */; };
+		ABDA6E631DA7C6100084A1D1 /* iCheckbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ABDA6E5C1DA7C52C0084A1D1 /* iCheckbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,23 +25,23 @@
 			remoteGlobalIDString = ABB762FE1DA6BA4600C6D27C;
 			remoteInfo = iCheckboxDemo;
 		};
-		ABB763641DA6C04000C6D27C /* PBXContainerItemProxy */ = {
+		ABDA6E5B1DA7C52C0084A1D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */;
+			containerPortal = ABDA6E561DA7C52C0084A1D1 /* iCheckbox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABB762DC1DA6B9D000C6D27C;
 			remoteInfo = iCheckbox;
 		};
-		ABB763661DA6C04000C6D27C /* PBXContainerItemProxy */ = {
+		ABDA6E5D1DA7C52C0084A1D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */;
+			containerPortal = ABDA6E561DA7C52C0084A1D1 /* iCheckbox.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ABB762E51DA6B9D000C6D27C;
 			remoteInfo = iCheckboxTests;
 		};
-		ABB7636A1DA6C04D00C6D27C /* PBXContainerItemProxy */ = {
+		ABDA6E641DA7C6100084A1D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */;
+			containerPortal = ABDA6E561DA7C52C0084A1D1 /* iCheckbox.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = ABB762DB1DA6B9CF00C6D27C;
 			remoteInfo = iCheckbox;
@@ -55,7 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ABB763691DA6C04D00C6D27C /* iCheckbox.framework in Embed Frameworks */,
+				ABDA6E631DA7C6100084A1D1 /* iCheckbox.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,7 +73,7 @@
 		ABB763131DA6BA4600C6D27C /* iCheckboxDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCheckboxDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB763171DA6BA4600C6D27C /* iCheckboxDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCheckboxDemoTests.swift; sourceTree = "<group>"; };
 		ABB763191DA6BA4600C6D27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iCheckbox.xcodeproj; path = ../../iCheckbox.xcodeproj; sourceTree = "<group>"; };
+		ABDA6E561DA7C52C0084A1D1 /* iCheckbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iCheckbox.xcodeproj; path = ../../iCheckbox/iCheckbox.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABB763681DA6C04D00C6D27C /* iCheckbox.framework in Frameworks */,
+				ABDA6E621DA7C6100084A1D1 /* iCheckbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,7 +122,7 @@
 				ABB763091DA6BA4600C6D27C /* Assets.xcassets */,
 				ABB7630B1DA6BA4600C6D27C /* LaunchScreen.storyboard */,
 				ABB7630E1DA6BA4600C6D27C /* Info.plist */,
-				ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */,
+				ABDA6E561DA7C52C0084A1D1 /* iCheckbox.xcodeproj */,
 			);
 			path = iCheckboxDemo;
 			sourceTree = "<group>";
@@ -136,11 +136,11 @@
 			path = iCheckboxDemoTests;
 			sourceTree = "<group>";
 		};
-		ABB763601DA6C04000C6D27C /* Products */ = {
+		ABDA6E571DA7C52C0084A1D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ABB763651DA6C04000C6D27C /* iCheckbox.framework */,
-				ABB763671DA6C04000C6D27C /* iCheckboxTests.xctest */,
+				ABDA6E5C1DA7C52C0084A1D1 /* iCheckbox.framework */,
+				ABDA6E5E1DA7C52C0084A1D1 /* iCheckboxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				ABB7636B1DA6C04D00C6D27C /* PBXTargetDependency */,
+				ABDA6E651DA7C6100084A1D1 /* PBXTargetDependency */,
 			);
 			name = iCheckboxDemo;
 			productName = iCheckboxDemo;
@@ -221,8 +221,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = ABB763601DA6C04000C6D27C /* Products */;
-					ProjectRef = ABB7635F1DA6C04000C6D27C /* iCheckbox.xcodeproj */;
+					ProductGroup = ABDA6E571DA7C52C0084A1D1 /* Products */;
+					ProjectRef = ABDA6E561DA7C52C0084A1D1 /* iCheckbox.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -234,18 +234,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		ABB763651DA6C04000C6D27C /* iCheckbox.framework */ = {
+		ABDA6E5C1DA7C52C0084A1D1 /* iCheckbox.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = iCheckbox.framework;
-			remoteRef = ABB763641DA6C04000C6D27C /* PBXContainerItemProxy */;
+			remoteRef = ABDA6E5B1DA7C52C0084A1D1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		ABB763671DA6C04000C6D27C /* iCheckboxTests.xctest */ = {
+		ABDA6E5E1DA7C52C0084A1D1 /* iCheckboxTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = iCheckboxTests.xctest;
-			remoteRef = ABB763661DA6C04000C6D27C /* PBXContainerItemProxy */;
+			remoteRef = ABDA6E5D1DA7C52C0084A1D1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -296,10 +296,10 @@
 			target = ABB762FE1DA6BA4600C6D27C /* iCheckboxDemo */;
 			targetProxy = ABB763141DA6BA4600C6D27C /* PBXContainerItemProxy */;
 		};
-		ABB7636B1DA6C04D00C6D27C /* PBXTargetDependency */ = {
+		ABDA6E651DA7C6100084A1D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iCheckbox;
-			targetProxy = ABB7636A1DA6C04D00C6D27C /* PBXContainerItemProxy */;
+			targetProxy = ABDA6E641DA7C6100084A1D1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
