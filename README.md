@@ -54,8 +54,10 @@ Install using Carthage
 
 Install manually
 ------
-[In Progress]
 
+1. Drag the `iCheckbox.xcodeproj` to your project. Go to app target's settings, press the "+" under the `Embedded Binaries` section, and select the `iCheckbox.framework`
+2. Add `@import iCheckbox` in your class.
+3. That's all.
 
 Getting Started
 ------
@@ -106,6 +108,12 @@ class ViewController: UIViewController, iCheckboxDelegate {
     }
   }
 ```
+
+TODO
+-----
+* Add support for OSX, tvOS and watchOS.
+* More customization options.
+* Add unit tests.
 
 Contact
 ------
