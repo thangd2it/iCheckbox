@@ -2,7 +2,7 @@ iCheckbox
 ========
 
 A custom checkbox component for iOS apps, written in Swift 3.0.
-Checkboxes can be ordered in one or two columns, can have solid borders with or without rounded corners, single or multiple selections, etc. iCheckbox works with iOS 8 and newer, and can be used in an Objective-C project.
+Checkboxes can be ordered in one or two columns, can have solid borders with or without rounded corners, single or multiple selections, etc. iCheckbox works with iOS 8 and newer, also can be used in an Objective-C project.
 
 See few examples:
 > Single selection, two columns, rounded corners solid border with title
@@ -44,11 +44,13 @@ Library offers checkbox/checkbox pool customization:
 
 Install using Cocoapods
 ------
-[In Progress]
+CocoaPods manages library dependencies for your Xcode projects. If you haven't used it before, take a look [here](https://guides.cocoapods.org/using/getting-started.html).
 
-Install using Carthage
-------
-[In Progress]
+1. Add `pod 'iCheckbox'` to your `Podfile`.
+2. Run `pod install`.
+
+Note: If this is very first pod installed in your project don't
+forget to open `.xcworkspace` file not `.xcodeproj`.
 
 Install manually
 ------
@@ -63,6 +65,7 @@ Using iCheckbox is straightforward. Use `iCheckboxBuilderConfig` to create a con
 
 Full example:
 
+**Swift**
 ```
 class ViewController: UIViewController, iCheckboxDelegate {
 
@@ -106,12 +109,62 @@ class ViewController: UIViewController, iCheckboxDelegate {
     }
   }
 ```
+**Objective-C**
+```
+#import "ViewController.h"
+@import iCheckbox;
+
+@interface ViewController () <iCheckboxDelegate>
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    iCheckboxBuilderConfig *buiderConfig = [[iCheckboxBuilderConfig alloc] init];
+    buiderConfig.headerTitle = @"Some Title";
+    iCheckboxBuilder *builder = [[iCheckboxBuilder alloc] initWithCanvas:self.view
+                                                               andConfig:buiderConfig];
+    builder.delegate = self;
+
+    iCheckboxState *firstCheckbox = [[iCheckboxState alloc] initWithTitle:@"First"
+                                                                 selected:NO];
+    iCheckboxState *secondCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Second"
+                                                                  selected:NO];
+    iCheckboxState *thirdCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Third"
+                                                                  selected:NO];
+    iCheckboxState *fourthCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Four"
+                                                                  selected:NO];
+    iCheckboxState *fifthCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Five"
+                                                                  selected:NO];
+    iCheckboxState *sixthCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Six"
+                                                                  selected:NO];
+    iCheckboxState *seventhCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Seven"
+                                                                  selected:NO];
+    [builder addCheckboxesWithStates:@[firstCheckbox,
+                                       secondCheckbox,
+                                       thirdCheckbox,
+                                       fourthCheckbox,
+                                       fifthCheckbox,
+                                       sixthCheckbox,
+                                       seventhCheckbox]];
+}
+
+- (void)didSelectCheckboxWithState:(BOOL)state identifier:(NSInteger)identifier andTitle:(NSString *)title
+{
+    NSLog(@"Checkbox %@, has selected state: %d", title, state);
+}
+
+@end
+```
 
 TODO
 -----
 * Add support for OSX, tvOS and watchOS.
 * More customization options.
 * Add unit tests.
+* Add Carthage support.
 
 Contact
 ------
