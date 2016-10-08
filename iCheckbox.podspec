@@ -91,7 +91,7 @@ A custom checkbox component for iOS apps, written in Swift 3.0. Checkboxes can b
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "iCheckbox", "iCheckbox/**/*.{swift}"
+  s.source_files  = "iCheckbox/Source/*.{swift}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
