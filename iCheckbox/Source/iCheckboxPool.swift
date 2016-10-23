@@ -27,8 +27,8 @@ final class iCheckboxPool {
     var style: iCheckboxPoolStyle
     var borderStyle: iCheckboxPoolBorderStyle
     
-    private var index = 0
     private var checkboxes: [iCheckbox]
+    private var index = 0
     
     // MARK: - Initializers
     
@@ -65,6 +65,10 @@ final class iCheckboxPool {
         } else {
             return 2
         }
+    }
+    
+    func numberOfCheckboxes() -> Int {
+        return checkboxes.count
     }
     
     func bordered() -> Bool {
