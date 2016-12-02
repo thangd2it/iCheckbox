@@ -4,13 +4,23 @@ xcode_project: iCheckbox.xcodeproj
 xcode_scheme: iCheckbox
 xcode_sdk: iphonesimulator9.3
 env:
-  global: 
-    - FRAMEWORK_NAME=iCheckbox
+  global:
+  - FRAMEWORK_NAME=iCheckbox
 before_install:
-  - brew update
-  - brew outdated carthage || brew upgrade carthage
+- brew update
+- brew outdated carthage || brew upgrade carthage
 before_script:
-  - carthage bootstrap  
+- carthage bootstrap
 before_deploy:
-  - carthage build --no-skip-current
-  - carthage archive $FRAMEWORK_NAME
+- carthage build --no-skip-current
+- carthage archive $FRAMEWORK_NAME
+deploy:
+  provider: releases
+  api_key:
+    secure: vDtDTufvwUG4rFvYWYPf/3EopPV3OW57fvQJnL6Dsvp4rQ00yOMB9uKgZhGgCsxGTYnnr3tKPp+p94SGZ5oCzu5tZyzokFlIbXGvL/DJZheo69YeB5XTL8EGOd77UZPqtTDoBd6QveOfb+6Jct0GBzAdOVuv71zhGIv36V5y5XyfyP6p1HFEXUf4dEnk0efdKpmg2oEFZuVBooGk3NOgAVAUkXBXy8GAsqG5sg6VkMQWNScaCzEm84UWoN3uD36t6gnhqOWLJ5bxA4Vqzrc2Vl85FW+97tmdohmRvtHwufAaSQ9So4bbwpTUPNirDFwb3fb0ifV1ezFf37jlsTX7A10PVF2NYh4xzyrXYkQAE027MedKKRcLHO/n8RZ+7JThmMCmrMk4zKLm7zKLj/j7zFgwBXpyctIY7HufWOCTIO143eKRgc2s8s6D38gsuMnJ9N8Hk+CkxXoYWbv6eVi0EfXwc1snTT42CPJ48ERoQVpjLCHoxV+GyFoTGkotGuaTuPb/kvhH9DrT+ExLrZtM85WJN5xYOywwqbRVhB9LsPzKVHjuSJjyPj2mOj90rp4XrByMrklG6c6Qg5DRa9doHZ/FQptP6mcRL8BktTORhv89RfRa3jJdJraL07K7qq1zd512PkieiS0k5/EeDzFVArCgbZbWaySpy2rlRytoedE=
+  file: iCheckbox.framework.zip
+  skip_cleanup: true
+  on:
+    repo: mancunianetz/iCheckbox
+    branch: master
+    tags: true
