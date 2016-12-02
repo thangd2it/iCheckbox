@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB5892F31DA79291000829B3 /* iCheckbox+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5892F21DA79291000829B3 /* iCheckbox+Image.swift */; };
+		AB5892F31DA79291000829B3 /* iCheckboxImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5892F21DA79291000829B3 /* iCheckboxImageExtension.swift */; };
+		AB8F3EC51DBCE69000FC9E2E /* iCheckbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB762DC1DA6B9D000C6D27C /* iCheckbox.framework */; };
+		AB8F3ECC1DBCF71700FC9E2E /* iCheckboxStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F3ECB1DBCF71700FC9E2E /* iCheckboxStateTests.swift */; };
+		AB8F3ECE1DBD178500FC9E2E /* iCheckboxPoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F3ECD1DBD178500FC9E2E /* iCheckboxPoolTests.swift */; };
+		AB8F3ED01DBD5FFA00FC9E2E /* iCheckboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8F3ECF1DBD5FFA00FC9E2E /* iCheckboxTests.swift */; };
 		ABB762ED1DA6B9D000C6D27C /* iCheckbox.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB762DF1DA6B9D000C6D27C /* iCheckbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB763511DA6BB2C00C6D27C /* iCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7634C1DA6BB2C00C6D27C /* iCheckbox.swift */; };
 		ABB763531DA6BB2C00C6D27C /* iCheckboxBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB7634D1DA6BB2C00C6D27C /* iCheckboxBuilder.swift */; };
@@ -17,8 +21,23 @@
 		ABB7635C1DA6BC0100C6D27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB7635B1DA6BC0100C6D27C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AB8F3EC61DBCE69000FC9E2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABB762D31DA6B9CF00C6D27C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABB762DB1DA6B9CF00C6D27C;
+			remoteInfo = iCheckbox;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		AB5892F21DA79291000829B3 /* iCheckbox+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iCheckbox+Image.swift"; sourceTree = "<group>"; };
+		AB5892F21DA79291000829B3 /* iCheckboxImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCheckboxImageExtension.swift; sourceTree = "<group>"; };
+		AB8F3EC01DBCE68F00FC9E2E /* iCheckboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCheckboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB8F3EC41DBCE69000FC9E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB8F3ECB1DBCF71700FC9E2E /* iCheckboxStateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCheckboxStateTests.swift; sourceTree = "<group>"; };
+		AB8F3ECD1DBD178500FC9E2E /* iCheckboxPoolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCheckboxPoolTests.swift; sourceTree = "<group>"; };
+		AB8F3ECF1DBD5FFA00FC9E2E /* iCheckboxTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCheckboxTests.swift; sourceTree = "<group>"; };
 		ABB762DC1DA6B9D000C6D27C /* iCheckbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iCheckbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB762DF1DA6B9D000C6D27C /* iCheckbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCheckbox.h; sourceTree = "<group>"; };
 		ABB762E01DA6B9D000C6D27C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +50,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AB8F3EBD1DBCE68F00FC9E2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB8F3EC51DBCE69000FC9E2E /* iCheckbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABB762D81DA6B9CF00C6D27C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB8F3EC11DBCE69000FC9E2E /* iCheckboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB8F3EC41DBCE69000FC9E2E /* Info.plist */,
+				AB8F3ECD1DBD178500FC9E2E /* iCheckboxPoolTests.swift */,
+				AB8F3ECB1DBCF71700FC9E2E /* iCheckboxStateTests.swift */,
+				AB8F3ECF1DBD5FFA00FC9E2E /* iCheckboxTests.swift */,
+			);
+			path = iCheckboxTests;
+			sourceTree = "<group>";
+		};
 		ABB762D21DA6B9CF00C6D27C = {
 			isa = PBXGroup;
 			children = (
 				ABB762DE1DA6B9D000C6D27C /* iCheckbox */,
+				AB8F3EC11DBCE69000FC9E2E /* iCheckboxTests */,
 				ABB762DD1DA6B9D000C6D27C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB762DC1DA6B9D000C6D27C /* iCheckbox.framework */,
+				AB8F3EC01DBCE68F00FC9E2E /* iCheckboxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,7 +115,7 @@
 				ABB7634C1DA6BB2C00C6D27C /* iCheckbox.swift */,
 				ABB7634F1DA6BB2C00C6D27C /* iCheckboxPool.swift */,
 				ABB763501DA6BB2C00C6D27C /* iCheckboxState.swift */,
-				AB5892F21DA79291000829B3 /* iCheckbox+Image.swift */,
+				AB5892F21DA79291000829B3 /* iCheckboxImageExtension.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -111,6 +151,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		AB8F3EBF1DBCE68F00FC9E2E /* iCheckboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB8F3ECA1DBCE69000FC9E2E /* Build configuration list for PBXNativeTarget "iCheckboxTests" */;
+			buildPhases = (
+				AB8F3EBC1DBCE68F00FC9E2E /* Sources */,
+				AB8F3EBD1DBCE68F00FC9E2E /* Frameworks */,
+				AB8F3EBE1DBCE68F00FC9E2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB8F3EC71DBCE69000FC9E2E /* PBXTargetDependency */,
+			);
+			name = iCheckboxTests;
+			productName = iCheckboxTests;
+			productReference = AB8F3EC01DBCE68F00FC9E2E /* iCheckboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ABB762DB1DA6B9CF00C6D27C /* iCheckbox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABB762F01DA6B9D000C6D27C /* Build configuration list for PBXNativeTarget "iCheckbox" */;
@@ -136,9 +194,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Godoroja Stefan";
 				TargetAttributes = {
+					AB8F3EBF1DBCE68F00FC9E2E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = Q453Q9XLFV;
+						ProvisioningStyle = Automatic;
+					};
 					ABB762DB1DA6B9CF00C6D27C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q453Q9XLFV;
@@ -159,11 +222,19 @@
 			projectRoot = "";
 			targets = (
 				ABB762DB1DA6B9CF00C6D27C /* iCheckbox */,
+				AB8F3EBF1DBCE68F00FC9E2E /* iCheckboxTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AB8F3EBE1DBCE68F00FC9E2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABB762DA1DA6B9CF00C6D27C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,13 +246,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AB8F3EBC1DBCE68F00FC9E2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB8F3ECE1DBD178500FC9E2E /* iCheckboxPoolTests.swift in Sources */,
+				AB8F3ECC1DBCF71700FC9E2E /* iCheckboxStateTests.swift in Sources */,
+				AB8F3ED01DBD5FFA00FC9E2E /* iCheckboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ABB762D71DA6B9CF00C6D27C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ABB763571DA6BB2D00C6D27C /* iCheckboxPool.swift in Sources */,
 				ABB763551DA6BB2D00C6D27C /* iCheckboxBuilderConfig.swift in Sources */,
-				AB5892F31DA79291000829B3 /* iCheckbox+Image.swift in Sources */,
+				AB5892F31DA79291000829B3 /* iCheckboxImageExtension.swift in Sources */,
 				ABB763531DA6BB2C00C6D27C /* iCheckboxBuilder.swift in Sources */,
 				ABB763511DA6BB2C00C6D27C /* iCheckbox.swift in Sources */,
 				ABB763591DA6BB2D00C6D27C /* iCheckboxState.swift in Sources */,
@@ -190,7 +271,39 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AB8F3EC71DBCE69000FC9E2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABB762DB1DA6B9CF00C6D27C /* iCheckbox */;
+			targetProxy = AB8F3EC61DBCE69000FC9E2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		AB8F3EC81DBCE69000FC9E2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Q453Q9XLFV;
+				INFOPLIST_FILE = iCheckboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gs.godorojastefan.iCheckboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AB8F3EC91DBCE69000FC9E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Q453Q9XLFV;
+				INFOPLIST_FILE = iCheckboxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gs.godorojastefan.iCheckboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		ABB762EE1DA6B9D000C6D27C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -209,6 +322,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -262,6 +376,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -332,6 +447,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AB8F3ECA1DBCE69000FC9E2E /* Build configuration list for PBXNativeTarget "iCheckboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB8F3EC81DBCE69000FC9E2E /* Debug */,
+				AB8F3EC91DBCE69000FC9E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ABB762D61DA6B9CF00C6D27C /* Build configuration list for PBXProject "iCheckbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

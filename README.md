@@ -1,4 +1,4 @@
-iCheckbox
+iCheckbox [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mancunianetz/iCheckbox/master/LICENSE)
 ========
 
 A custom checkbox component for iOS apps, written in Swift 3.0.
@@ -42,6 +42,11 @@ Library offers checkbox/checkbox pool customization:
   - Border corner radius
   - Header title color
 
+Install manually
+------
+1. Drag the `iCheckbox.xcodeproj` to your project. Go to app target's settings, press the "+" under the `Embedded Binaries` section, and select the `iCheckbox.framework`
+2. Add `@import iCheckbox` in your class.
+
 Install using Cocoapods
 ------
 CocoaPods manages library dependencies for your Xcode projects. If you haven't used it before, take a look [here](https://guides.cocoapods.org/using/getting-started.html).
@@ -52,12 +57,9 @@ CocoaPods manages library dependencies for your Xcode projects. If you haven't u
 Note: If this is very first pod installed in your project don't
 forget to open `.xcworkspace` file not `.xcodeproj`.
 
-Install manually
-------
+Install using Carthage
+-----
 
-1. Drag the `iCheckbox.xcodeproj` to your project. Go to app target's settings, press the "+" under the `Embedded Binaries` section, and select the `iCheckbox.framework`
-2. Add `@import iCheckbox` in your class.
-3. That's all.
 
 Getting Started
 ------
@@ -164,7 +166,6 @@ TODO
 * Add support for OSX, tvOS and watchOS.
 * More customization options.
 * Add unit tests.
-* Add Carthage support.
 
 Contact
 ------
@@ -173,24 +174,5 @@ Alternatively you can contact me on [twitter](https://twitter.com/mancunianetz).
 
 License
 ------
-MIT License
 
-Copyright (c) 2016 Stefan Godoroja
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Copyright (c) 2016 Stefan Godoroja. iCheckbox is released under the [MIT License](https://raw.githubusercontent.com/mancunianetz/iCheckbox/master/LICENSE).
