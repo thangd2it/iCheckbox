@@ -32,11 +32,11 @@ final class iCheckbox: UIButton {
     // MARK: Setters
     
     func setImageForSelectedState(withName name: String) {
-        self.setImage(UIImage(named: name, associatedWith: iCheckbox.self), for: UIControlState.selected)
+        self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.selected)
     }
     
     func setImageForNormalState(withName name: String) {
-        self.setImage(UIImage(named: name, associatedWith: iCheckbox.self), for: UIControlState.normal)
+        self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.normal)
     }
     
     func setTitleColorForSelectedState(color: UIColor) {
