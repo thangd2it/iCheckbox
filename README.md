@@ -1,4 +1,4 @@
-iCheckbox [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mancunianetz/iCheckbox/master/LICENSE)
+iCheckbox [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/mancunianetz/iCheckbox/master/LICENSE)
 ========
 
 A custom checkbox component for iOS apps, written in Swift 3.0.
@@ -166,6 +166,7 @@ TODO
 * Add support for OSX, tvOS and watchOS.
 * More customization options.
 * Add unit tests.
+* Add Carthage support.
 
 Contact
 ------
