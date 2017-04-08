@@ -16,30 +16,27 @@ class ViewController: UIViewController, iCheckboxDelegate {
         addCheckboxes()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+
     func addCheckboxes() {
-        var checkboxBuilderConfig = iCheckboxBuilderConfig()
+        let checkboxBuilderConfig = iCheckboxBuilderConfig()
         checkboxBuilderConfig.headerTitle = "Some title"
         
         let checkboxBuilder = iCheckboxBuilder(withCanvas: self.view, andConfig: checkboxBuilderConfig)
         checkboxBuilder.delegate = self
         
-        var firstCheckboxState = iCheckboxState()
+        let firstCheckboxState = iCheckboxState()
         firstCheckboxState.title = "One"
-        var secondCheckboxState = iCheckboxState()
+        let secondCheckboxState = iCheckboxState()
         secondCheckboxState.title = "Two"
-        var thirdCheckboxState = iCheckboxState()
+        let thirdCheckboxState = iCheckboxState()
         thirdCheckboxState.title = "Three"
-        var fourthCheckboxState = iCheckboxState()
+        let fourthCheckboxState = iCheckboxState()
         fourthCheckboxState.title = "Four"
-        var fifthCheckboxState = iCheckboxState()
+        let fifthCheckboxState = iCheckboxState()
         fifthCheckboxState.title = "Five"
-        var sixthCheckboxState = iCheckboxState()
+        let sixthCheckboxState = iCheckboxState()
         sixthCheckboxState.title = "Six"
-        var seventhCheckboxState = iCheckboxState()
+        let seventhCheckboxState = iCheckboxState()
         seventhCheckboxState.title = "Seven"
         checkboxBuilder.addCheckboxes(withStates: [firstCheckboxState,
                                                    secondCheckboxState,
