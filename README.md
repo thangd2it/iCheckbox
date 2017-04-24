@@ -57,10 +57,6 @@ CocoaPods manages library dependencies for your Xcode projects. If you haven't u
 Note: If this is very first pod installed in your project don't
 forget to open `.xcworkspace` file not `.xcodeproj`.
 
-Install using Carthage
------
-
-
 Getting Started
 ------
 Using iCheckbox is straightforward. Use `iCheckboxBuilderConfig` to create a configuration instance for the `iCheckboxBuilder` which will render checkboxes. `iCheckboxBuilderConfig` contains values to setup checkbox title color, checkbox states images, checkbox pool border, etc. Except `iCheckboxBuilderConfig`, `iCheckboxBuilder` takes a series of `iCheckboxState`s, each of them describing a checkbox, it's title and selected state. To get notified when a checkbox is tapped, interested class must implement `iCheckboxDelegate`'s didSelectCheckbox() method.
@@ -130,27 +126,27 @@ class ViewController: UIViewController, iCheckboxDelegate {
                                                                andConfig:buiderConfig];
     builder.delegate = self;
 
-    iCheckboxState *firstCheckbox = [[iCheckboxState alloc] initWithTitle:@"First"
+    iCheckboxState *firstCheckboxState = [[iCheckboxState alloc] initWithTitle:@"First"
                                                                  selected:NO];
-    iCheckboxState *secondCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Second"
+    iCheckboxState *secondCheckboxState =  [[iCheckboxState alloc] initWithTitle:@"Second"
                                                                   selected:NO];
-    iCheckboxState *thirdCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Third"
+    iCheckboxState *thirdCheckboxState =  [[iCheckboxState alloc] initWithTitle:@"Third"
                                                                   selected:NO];
-    iCheckboxState *fourthCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Four"
+    iCheckboxState *fourthCheckboxState =  [[iCheckboxState alloc] initWithTitle:@"Four"
                                                                   selected:NO];
-    iCheckboxState *fifthCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Five"
+    iCheckboxState *fifthCheckboxState =  [[iCheckboxState alloc] initWithTitle:@"Five"
                                                                   selected:NO];
-    iCheckboxState *sixthCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Six"
+    iCheckboxState *sixthCheckboxState =  [[iCheckboxState alloc] initWithTitle:@"Six"
                                                                   selected:NO];
-    iCheckboxState *seventhCheckbox =  [[iCheckboxState alloc] initWithTitle:@"Seven"
+    iCheckboxState *seventhCheckboxState =  [[iCheckboxState alloc] initWithTitle:@"Seven"
                                                                   selected:NO];
-    [builder addCheckboxesWithStates:@[firstCheckbox,
-                                       secondCheckbox,
-                                       thirdCheckbox,
-                                       fourthCheckbox,
-                                       fifthCheckbox,
-                                       sixthCheckbox,
-                                       seventhCheckbox]];
+    [builder addCheckboxesWithStates:@[firstCheckboxState,
+                                       secondCheckboxState,
+                                       thirdCheckboxState,
+                                       fourthCheckboxState,
+                                       fifthCheckboxState,
+                                       sixthCheckboxState,
+                                       seventhCheckboxState]];
 }
 
 - (void)didSelectCheckboxWithState:(BOOL)state identifier:(NSInteger)identifier andTitle:(NSString *)title
