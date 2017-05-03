@@ -46,6 +46,10 @@ final class iCheckbox: UIButton {
     func setTitleColorForNormalState(color: UIColor) {
         self.setTitleColor(color, for: UIControlState.normal)
     }
+    
+    func setTitleColorForHighlightedState(color: UIColor) {
+        self.setTitleColor(color, for: .highlighted)
+    }
 
     // MARK: IBActions
     

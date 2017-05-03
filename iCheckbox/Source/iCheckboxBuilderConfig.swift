@@ -13,6 +13,7 @@ public final class iCheckboxBuilderConfig: NSObject {
     public var startPosition = CGPoint(x: 20, y: 100)
     public var checkboxSize = CGSize(width: 150, height: 44)
     
+    public var titleColorForHighlightedState = UIColor.black
     public var titleColorForSelectedState = UIColor.black
     public var titleColorForNormalState = UIColor.black
     public var lineBreakMode: NSLineBreakMode = .byTruncatingMiddle
