@@ -6,6 +6,7 @@
 //  Copyright © 2016 Demo. All rights reserved.
 //
 
+
 @objc
 public final class iCheckboxBuilderConfig: NSObject {
     
@@ -14,6 +15,8 @@ public final class iCheckboxBuilderConfig: NSObject {
     
     public var titleColorForSelectedState = UIColor.black
     public var titleColorForNormalState = UIColor.black
+    public var lineBreakMode: NSLineBreakMode = .byTruncatingMiddle
+    public var font: UIFont = UIFont.systemFont(ofSize: 17)
     
     public var imageNameForSelectedState = "checkbox_checked"
     public var imageNameForNormalState = "checkbox_unchecked"

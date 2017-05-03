@@ -50,6 +50,8 @@ public final class iCheckboxBuilder: NSObject {
             checkbox.setImageForSelectedState(withName: checkboxBuilderConfig.imageNameForSelectedState)
             checkbox.setTitleColorForNormalState(color: checkboxBuilderConfig.titleColorForNormalState)
             checkbox.setTitleColorForSelectedState(color: checkboxBuilderConfig.titleColorForSelectedState)
+            checkbox.titleLabel?.font = checkboxBuilderConfig.font
+            checkbox.titleLabel?.lineBreakMode = checkboxBuilderConfig.lineBreakMode
             
             checkbox.onSelect = { checkbox in
                 
