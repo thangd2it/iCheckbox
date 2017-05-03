@@ -14,7 +14,7 @@ public class iCheckboxGroup: NSObject {
     public var isEnabled: Bool = true {
         didSet {
             for cb in checkboxes {
-                cb.isEnabled = isEnabled
+                cb.isUserInteractionEnabled = isEnabled
             }
         }
     }
@@ -26,7 +26,7 @@ public class iCheckboxGroup: NSObject {
     
     public func add(checkbox: iCheckbox) {
         checkboxes.append(checkbox)
-        checkbox.isEnabled = isEnabled
+        checkbox.isUserInteractionEnabled = isEnabled
     }
     
     public func changeTitleColor(forCheckbox tag: Int, color: UIColor) {
