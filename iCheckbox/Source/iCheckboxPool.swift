@@ -28,7 +28,7 @@ final class iCheckboxPool {
     var borderStyle: iCheckboxPoolBorderStyle
     
     private var checkboxes: [iCheckbox]
-    private var index = 100
+    private var index = 0
     
     // MARK: - Initializers
     

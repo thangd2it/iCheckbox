@@ -61,8 +61,6 @@ public final class iCheckboxBuilder: NSObject {
             checkbox.titleLabel?.font = checkboxBuilderConfig.font
             checkbox.titleLabel?.lineBreakMode = checkboxBuilderConfig.lineBreakMode
             
-//            checkbox.tag = index + 1000
-            
             checkbox.onSelect = { checkbox in
                 
                 switch self.checkboxPool.selectionType {
@@ -134,6 +132,7 @@ public final class iCheckboxBuilder: NSObject {
             borderShape.strokeColor = checkboxBuilderConfig.borderColor.cgColor
             borderShape.lineWidth = checkboxBuilderConfig.borderWidth
             canvas?.layer.addSublayer(borderShape)
+            headerLabel.tag = 1000
             canvas?.addSubview(headerLabel)
         }
     }

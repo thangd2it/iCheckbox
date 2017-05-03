@@ -30,11 +30,13 @@ public class iCheckboxGroup: NSObject {
     }
     
     public func changeAnswerState(ofCheckbox tag: Int, state: UIControlState) {
-        guard let cb = containerView.viewWithTag(tag) as? iCheckbox else {
-            fatalError("Cannot find view with tag \(tag)")
+        let subviews = containerView.subviews
+        for sv in subviews {
+            if let cb = sv as? iCheckbox,  sv.tag == tag {
+                cb.answerState = state
+                break
+            }
         }
-        
-        cb.answerState = state
     }
 }
 
