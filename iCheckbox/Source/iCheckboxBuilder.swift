@@ -56,6 +56,8 @@ public final class iCheckboxBuilder: NSObject {
             checkbox.titleLabel?.font = checkboxBuilderConfig.font
             checkbox.titleLabel?.lineBreakMode = checkboxBuilderConfig.lineBreakMode
             
+            checkbox.tag = index
+            
             checkbox.onSelect = { checkbox in
                 
                 switch self.checkboxPool.selectionType {
