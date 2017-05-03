@@ -19,6 +19,7 @@
 		ABB763591DA6BB2D00C6D27C /* iCheckboxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB763501DA6BB2C00C6D27C /* iCheckboxState.swift */; };
 		ABB7635C1DA6BC0100C6D27C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABB7635B1DA6BC0100C6D27C /* Assets.xcassets */; };
 		ABC7AB3D1E1F16FC00B0516C /* UIImageExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7AB3C1E1F16FC00B0516C /* UIImageExtensionTests.swift */; };
+		DB3AD8081EB9941600DC71ED /* iCheckBoxGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3AD8071EB9941600DC71ED /* iCheckBoxGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		ABB763501DA6BB2C00C6D27C /* iCheckboxState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCheckboxState.swift; sourceTree = "<group>"; };
 		ABB7635B1DA6BC0100C6D27C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		ABC7AB3C1E1F16FC00B0516C /* UIImageExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensionTests.swift; sourceTree = "<group>"; };
+		DB3AD8071EB9941600DC71ED /* iCheckBoxGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iCheckBoxGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				ABB7634C1DA6BB2C00C6D27C /* iCheckbox.swift */,
 				ABB7634F1DA6BB2C00C6D27C /* iCheckboxPool.swift */,
 				ABB763501DA6BB2C00C6D27C /* iCheckboxState.swift */,
+				DB3AD8071EB9941600DC71ED /* iCheckBoxGroup.swift */,
 			);
 			path = Source;
 			sourceTree = SOURCE_ROOT;
@@ -273,6 +276,7 @@
 				ABB763551DA6BB2D00C6D27C /* iCheckboxBuilderConfig.swift in Sources */,
 				AB5892F31DA79291000829B3 /* UIImageExtension.swift in Sources */,
 				ABB763531DA6BB2C00C6D27C /* iCheckboxBuilder.swift in Sources */,
+				DB3AD8081EB9941600DC71ED /* iCheckBoxGroup.swift in Sources */,
 				ABB763511DA6BB2C00C6D27C /* iCheckbox.swift in Sources */,
 				ABB763591DA6BB2D00C6D27C /* iCheckboxState.swift in Sources */,
 			);

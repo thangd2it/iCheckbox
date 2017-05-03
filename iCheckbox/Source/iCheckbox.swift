@@ -11,7 +11,7 @@ public protocol iCheckboxDelegate {
     func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String)
 }
 
-final class iCheckbox: UIButton {
+final public class iCheckbox: UIButton {
     
     var onSelect: ((iCheckbox) -> ())?
 

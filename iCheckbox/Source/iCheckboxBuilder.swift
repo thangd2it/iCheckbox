@@ -18,6 +18,7 @@ public final class iCheckboxBuilder: NSObject {
     private weak var canvas: UIView?
     private lazy var headerLabel = UILabel()
     private let borderPadding: CGFloat = 5.0
+    private let checkBoxGroup: iCheckboxGroup
     
     // MARK: - Initializers
     
@@ -30,6 +31,7 @@ public final class iCheckboxBuilder: NSObject {
         self.checkboxPool.borderStyle = config.borderStyle
         self.nextOriginX = config.startPosition.x
         self.nextOriginY = config.startPosition.y
+        self.checkBoxGroup = iCheckboxGroup(view: canvas)
     }
     
     // MARK: - Create checkboxes
@@ -72,6 +74,7 @@ public final class iCheckboxBuilder: NSObject {
 
             checkboxPool.addCheckbox(checkbox: checkbox)
             canvas?.addSubview(checkbox)
+            checkBoxGroup.add(checkbox: checkbox)
             index += 1
             
             calculateNextPositionX(forCheckboxAtIndex: index,
@@ -79,6 +82,10 @@ public final class iCheckboxBuilder: NSObject {
             calculateNextPositionY(forCheckboxAtIndex: index,
                                    andNumberOfCheckboxes: states.count)
         }
+    }
+    
+    public func build() -> iCheckboxGroup {
+        return checkBoxGroup
     }
     
     // MARK: - Private
