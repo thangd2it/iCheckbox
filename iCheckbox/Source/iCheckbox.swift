@@ -17,7 +17,7 @@ final public class iCheckbox: UIButton {
 
     // MARK: Initializer
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
