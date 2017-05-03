@@ -11,6 +11,8 @@ import iCheckbox
 
 class ViewController: UIViewController, iCheckboxDelegate {
     
+    var group: iCheckboxGroup!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addCheckboxes()
@@ -45,10 +47,13 @@ class ViewController: UIViewController, iCheckboxDelegate {
                                                    fifthCheckboxState,
                                                    sixthCheckboxState,
                                                    seventhCheckboxState])
+        
+        group = checkboxBuilder.build()
     }
     
     func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String) {
-        print("Checkbox '\(title)', has selected state: \(state)")
+        print("Checkbox with tag \(identifier) has '\(title)', has selected state: \(state)")
+        group.changeAnswerState(ofCheckbox: identifier, state: state ? .right : .wrong)
     }
 }
 

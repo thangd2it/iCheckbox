@@ -11,9 +11,25 @@ public protocol iCheckboxDelegate {
     func didSelectCheckbox(withState state: Bool, identifier: Int, andTitle title: String)
 }
 
+extension UIControlState {
+    public static var right: UIControlState {
+        return UIControlState.init(rawValue: 10000)
+    }
+    
+    public static var wrong: UIControlState {
+        return UIControlState(rawValue: 20000)
+    }
+}
+
 final public class iCheckbox: UIButton {
     
     var onSelect: ((iCheckbox) -> ())?
+    
+    public var answerState: UIControlState = .normal {
+        didSet {
+            layoutSubviews()
+        }
+    }
 
     // MARK: Initializer
     
@@ -27,6 +43,16 @@ final public class iCheckbox: UIButton {
         self.isSelected = selected
         self.setTitle(title, for: UIControlState.normal)
         self.addTarget(self, action: #selector(iCheckbox.onTouchUpInside(_:)), for: UIControlEvents.touchUpInside)
+        
+        
+        
+    }
+    
+    public override var state: UIControlState {
+        let superState = super.state
+        let combinedState = superState.union(answerState)
+        
+        return combinedState
     }
 
     // MARK: Setters
@@ -39,6 +65,20 @@ final public class iCheckbox: UIButton {
         self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.normal)
     }
     
+    func setImageForRightState(withName name: String) {
+        self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.right)
+        
+        self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.right.union(.selected))
+        self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.right.union(.highlighted))
+    }
+    
+    func setImageForWrongState(withName name: String) {
+        self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.wrong)
+        
+        self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.wrong.union(.selected))
+        self.setImage(UIImage(named: name, withBundleAssociatedClass: iCheckbox.self), for: UIControlState.wrong.union(.highlighted))
+    }
+    
     func setTitleColorForSelectedState(color: UIColor) {
         self.setTitleColor(color, for: UIControlState.selected)
     }
@@ -49,6 +89,18 @@ final public class iCheckbox: UIButton {
     
     func setTitleColorForHighlightedState(color: UIColor) {
         self.setTitleColor(color, for: .highlighted)
+    }
+    
+    func setTitleColorForRightState(color: UIColor) {
+        self.setTitleColor(color, for: .right)
+        self.setTitleColor(color, for: UIControlState.right.union(.selected))
+        self.setTitleColor(color, for: UIControlState.right.union(.highlighted))
+    }
+    
+    func setTitleColorForWrongState(color: UIColor) {
+        self.setTitleColor(color, for: .wrong)
+        self.setTitleColor(color, for: UIControlState.wrong.union(.selected))
+        self.setTitleColor(color, for: UIControlState.wrong.union(.highlighted))
     }
 
     // MARK: IBActions

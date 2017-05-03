@@ -29,13 +29,12 @@ public class iCheckboxGroup: NSObject {
         checkbox.isUserInteractionEnabled = isEnabled
     }
     
-    public func changeTitleColor(forCheckbox tag: Int, color: UIColor) {
-        for cb in checkboxes {
-            if cb.tag == tag {
-                cb.setTitleColorForNormalState(color: color)
-                break
-            }
+    public func changeAnswerState(ofCheckbox tag: Int, state: UIControlState) {
+        guard let cb = containerView.viewWithTag(tag) as? iCheckbox else {
+            fatalError("Cannot find view with tag \(tag)")
         }
+        
+        cb.answerState = state
     }
 }
 

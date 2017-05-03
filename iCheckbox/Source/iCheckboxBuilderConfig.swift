@@ -16,11 +16,15 @@ public final class iCheckboxBuilderConfig: NSObject {
     public var titleColorForHighlightedState = UIColor.black
     public var titleColorForSelectedState = UIColor.black
     public var titleColorForNormalState = UIColor.black
+    public var titleColorForRightState = UIColor.green
+    public var titleColorForWrongState = UIColor.gray
     public var lineBreakMode: NSLineBreakMode = .byTruncatingMiddle
     public var font: UIFont = UIFont.systemFont(ofSize: 17)
     
     public var imageNameForSelectedState = "checkbox_checked"
     public var imageNameForNormalState = "checkbox_unchecked"
+    public var imageNameForRightState = "checkbox_checked"
+    public var imageNameForWrongState = "checkbox_checked"
     
     public var selection: iCheckboxSelection = .Single
     public var style: iCheckboxPoolStyle = .OneColumn
